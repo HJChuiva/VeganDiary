@@ -4,31 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud"
     tools:context=".SettingActivity">
 
+
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Back1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_rectangle_189" />
 
-    <ImageButton
-        android:id="@+id/GoBack"
+    <ImageView
+        android:id="@+id/Back2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/big_rectangle" />
+
+    <ImageButton
+        android:id="@+id/GoBack_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="338dp"
         android:layout_marginBottom="60dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/backgroud"
         android:tint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/Back1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,12 +62,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ellipse_12" />
 
+    <Button
+        android:id="@+id/EditProfile_Btn"
+        android:layout_width="105dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="228dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="0dp"
+        android:text="edit profile"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/SettingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="@font/roboto"
         android:text="Setting"
         android:textColor="#000000"
@@ -63,7 +96,7 @@
         android:id="@+id/settingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="72dp"
         android:fontFamily="@font/roboto_medium"
         android:text="My Page"
@@ -72,21 +105,221 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/ProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="332dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="회원정보"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Line"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line_15" />
+
+    <ImageView
+        android:id="@+id/Line2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="253dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line_15" />
+
+    <ImageView
+        android:id="@+id/Line3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="367dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_line_15" />
+
+    <ImageView
+        android:id="@+id/Menu_bar"
+        android:layout_width="414dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menu_bar"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="221dp"
+        android:layout_marginTop="178dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ellipse_13" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="183dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__" />
+
+    <LinearLayout
+        android:layout_width="312dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="48dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Line3">
+
+        <Button
+            android:id="@+id/EditInfor_Btn"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:background="#00ff0000"
+            android:fontFamily="@font/roboto"
+            android:text="회원정보 수정                                              "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/EditPass_Btn"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:background="#00ff0000"
+            android:fontFamily="@font/roboto"
+            android:text="비밀번호 변경                                              "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/WithDrawal_Btn"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:background="#00ff0000"
+            android:fontFamily="@font/roboto"
+            android:text="회원탈퇴                                                      "
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="390dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GoBack"
-        app:srcCompat="@drawable/ic_line_15" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_3" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="414dp"
-        android:layout_height="56dp"
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="438dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_3" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="488dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector_3" />
+
+    <TextView
+        android:id="@+id/ProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="user name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyProfile" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/menu_bar"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_recipe"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="602dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_restaurant" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_calender" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_setting" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
