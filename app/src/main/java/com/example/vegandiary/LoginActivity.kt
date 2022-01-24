@@ -17,7 +17,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        Login_Btn = findViewById<Button>(R.id.Login_Btn)
+        Login_Btn = findViewById<Button>(R.id.EditProfile_Btn)
         edit_ID = findViewById<EditText>(R.id.edit_ID)
 
         Login_Btn.setOnClickListener{
