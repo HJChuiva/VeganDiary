@@ -34,7 +34,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 마커 아이콘 만들기
         val descriptor = getDescriptorFromDrawable(R.drawable.marker)
 
-
         // 마커
         mMap.addMarker(MarkerOptions()
                 .position(seoul)
@@ -61,6 +60,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 마커 크기 변환
         val scaledBitmap = Bitmap.createScaledBitmap(bitmapDrawable.bitmap, 100, 100, false)
         return BitmapDescriptorFactory.fromBitmap(scaledBitmap)
-
     }
 }
