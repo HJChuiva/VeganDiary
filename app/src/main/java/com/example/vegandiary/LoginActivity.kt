@@ -10,7 +10,6 @@ import android.widget.Toast
 
 class Login : AppCompatActivity() {
 
-
     lateinit var Login_Btn : Button
     lateinit var edit_ID : EditText
 

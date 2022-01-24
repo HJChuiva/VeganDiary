@@ -81,4 +81,12 @@
         app:layout_constraintTop_toBottomOf="@+id/GoBack"
         app:srcCompat="@drawable/ic_line_15" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="414dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/menu_bar"
+        tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
