@@ -20,7 +20,7 @@
                 android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/Title"
+                    android:id="@+id/TODAYS_RECIPES"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="56dp"
@@ -31,7 +31,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/Sub1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
@@ -41,22 +41,24 @@
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="312dp"
+                    android:layout_height="113dp"
                     android:layout_marginTop="56dp"
-                    app:srcCompat="@drawable/ic_rectangle_167" />
+                    android:layout_marginLeft="48dp"
+
+                    app:srcCompat="@drawable/rectangle_basic" />
 
                 <ImageView
                     android:id="@+id/line"
                     android:layout_width="312dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="48dp"
                     android:layout_marginTop="18dp"
                     android:layout_marginEnd="24dp"
                     app:srcCompat="@drawable/ic_line_15" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/RECENTLY_VIEWED"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="18dp"
@@ -67,7 +69,7 @@
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/sub2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
@@ -78,19 +80,95 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/Recipe1"
                         android:layout_width="98dp"
                         android:layout_height="145dp"
                         android:background="#00ff0000"
-                        app:srcCompat="@drawable/round_button" />
+                        android:layout_marginLeft="12dp"
+                        app:srcCompat="@drawable/rectangle_basic" />
+                    <ImageButton
+                        android:id="@+id/Recipe2"
+                        android:layout_width="98dp"
+                        android:layout_height="145dp"
+                        android:background="#00ff0000"
+                        android:layout_marginLeft="12dp"
+                        app:srcCompat="@drawable/rectangle_basic" />
+                    <ImageButton
+                        android:id="@+id/Recipe3"
+                        android:layout_width="98dp"
+                        android:layout_height="145dp"
+                        android:background="#00ff0000"
+                        android:layout_marginLeft="12dp"
+                        app:srcCompat="@drawable/rectangle_basic" />
 
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/POPULAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="POPULAR"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/sub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="A lot of people like it" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="98dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="48dp"
+
+                    app:srcCompat="@drawable/rectangle_basic" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="207dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="12dp"
+
+                        app:srcCompat="@drawable/rectangle_basic" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="98dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="48dp"
+
+                        app:srcCompat="@drawable/rectangle_basic" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="207dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="12dp"
+
+                        app:srcCompat="@drawable/rectangle_basic" />
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
