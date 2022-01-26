@@ -7,136 +7,133 @@
     tools:context=".MainActivity"
     android:background="@color/backgroud">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
 
 
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TODAYS_RECIPES"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
+
+                android:fontFamily="@font/roboto_bold"
+                android:text="TODAY'S RECIPES"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Sub1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto"
+                android:text="WHAT WOULD YOU LIKE TO COOK?"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:layout_marginTop="48dp"
+
+
+
+                app:srcCompat="@drawable/rectangle_basic" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="24dp"
+                app:srcCompat="@drawable/ic_line_15" />
+
+            <TextView
+                android:id="@+id/RECENTLY_VIEWED"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="RECENTLY VIEWED"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/sub2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="What did I eat?" />
+
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/TODAYS_RECIPES"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="56dp"
-
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="TODAY'S RECIPES"
-                    android:textColor="#000000"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/Sub1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:fontFamily="@font/roboto"
-                    android:text="WHAT WOULD YOU LIKE TO COOK?"
-                    android:textSize="13sp" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="113dp"
-                    android:layout_marginTop="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
 
 
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/Recipe1"
+                    android:layout_width="98dp"
+                    android:layout_height="145dp"
+                    android:background="#00ff0000"
+                    android:layout_weight="1"
+
+                    app:srcCompat="@drawable/rectangle_basic" />
+                <ImageButton
+                    android:id="@+id/Recipe2"
+                    android:layout_width="98dp"
+                    android:layout_height="145dp"
+                    android:background="#00ff0000"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
+                <ImageButton
+                    android:id="@+id/Recipe3"
+                    android:layout_width="98dp"
+                    android:layout_height="145dp"
+                    android:background="#00ff0000"
+                    android:layout_weight="1"
 
                     app:srcCompat="@drawable/rectangle_basic" />
 
-                <ImageView
-                    android:id="@+id/line"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginEnd="24dp"
-                    app:srcCompat="@drawable/ic_line_15" />
+            </LinearLayout>
 
-                <TextView
-                    android:id="@+id/RECENTLY_VIEWED"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="18dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="RECENTLY VIEWED"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+            <TextView
+                android:id="@+id/POPULAR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-                <TextView
-                    android:id="@+id/sub2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="POPULAR"
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
-                    android:text="What did I eat?" />
+            <TextView
+                android:id="@+id/sub3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
+                android:text="A lot of people like it" />
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="12dp"
-
-
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/Recipe1"
-                        android:layout_width="98dp"
-                        android:layout_height="145dp"
-                        android:background="#00ff0000"
-                        android:layout_weight="1"
-
-                        app:srcCompat="@drawable/rectangle_basic" />
-                    <ImageButton
-                        android:id="@+id/Recipe2"
-                        android:layout_width="98dp"
-                        android:layout_height="145dp"
-                        android:background="#00ff0000"
-                        android:layout_marginLeft="11dp"
-                        android:layout_marginRight="11dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/rectangle_basic" />
-                    <ImageButton
-                        android:id="@+id/Recipe3"
-                        android:layout_width="98dp"
-                        android:layout_height="145dp"
-                        android:background="#00ff0000"
-                        android:layout_weight="1"
-
-                        app:srcCompat="@drawable/rectangle_basic" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/POPULAR"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:layout_marginTop="18dp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="POPULAR"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/sub3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="A lot of people like it" />
-
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="98dp"
@@ -147,39 +144,42 @@
 
                     app:srcCompat="@drawable/rectangle_basic" />
 
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="207dp"
-                        android:layout_height="110dp"
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="207dp"
+                    android:layout_height="110dp"
 
-                        android:layout_marginTop="24dp"
-                        android:layout_weight="1"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
 
-                        app:srcCompat="@drawable/rectangle_basic" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent">
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="98dp"
-                        android:layout_height="110dp"
-                        android:layout_marginTop="24dp"
-
-
-                        app:srcCompat="@drawable/rectangle_basic" />
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="207dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginLeft="12dp"
-
-                        app:srcCompat="@drawable/rectangle_basic" />
-                </LinearLayout>
+                    app:srcCompat="@drawable/rectangle_basic" />
             </LinearLayout>
-        </ScrollView>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+                <ImageView
+                    android:layout_width="98dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_weight="1"
+
+
+                    app:srcCompat="@drawable/rectangle_basic" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+
+                    android:layout_width="207dp"
+                    android:layout_height="110dp"
+
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+
+                    app:srcCompat="@drawable/rectangle_basic" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 
