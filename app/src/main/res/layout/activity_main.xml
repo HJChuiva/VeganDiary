@@ -12,10 +12,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp">
-
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,7 +24,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="56dp"
-
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="TODAY'S RECIPES"
                     android:textColor="#000000"
@@ -37,26 +34,25 @@
                     android:id="@+id/Sub1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto"
                     android:text="WHAT WOULD YOU LIKE TO COOK?"
                     android:textSize="13sp" />
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
+                    android:layout_width="312dp"
                     android:layout_height="113dp"
-                    android:layout_marginTop="48dp"
-
-
+                    android:layout_marginTop="56dp"
+                    android:layout_marginLeft="48dp"
 
                     app:srcCompat="@drawable/rectangle_basic" />
 
                 <ImageView
                     android:id="@+id/line"
-                    android:layout_width="match_parent"
+                    android:layout_width="312dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="48dp"
                     android:layout_marginTop="18dp"
                     android:layout_marginEnd="24dp"
                     app:srcCompat="@drawable/ic_line_15" />
@@ -66,6 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="18dp"
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="RECENTLY VIEWED"
                     android:textColor="#000000"
@@ -75,7 +72,7 @@
                     android:id="@+id/sub2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginLeft="24dp"
                     android:text="What did I eat?" />
 
 
@@ -84,8 +81,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="12dp"
-
-
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -93,25 +90,21 @@
                         android:layout_width="98dp"
                         android:layout_height="145dp"
                         android:background="#00ff0000"
-                        android:layout_weight="1"
-
+                        android:layout_marginLeft="12dp"
                         app:srcCompat="@drawable/rectangle_basic" />
                     <ImageButton
                         android:id="@+id/Recipe2"
                         android:layout_width="98dp"
                         android:layout_height="145dp"
                         android:background="#00ff0000"
-                        android:layout_marginLeft="11dp"
-                        android:layout_marginRight="11dp"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
                         app:srcCompat="@drawable/rectangle_basic" />
                     <ImageButton
                         android:id="@+id/Recipe3"
                         android:layout_width="98dp"
                         android:layout_height="145dp"
                         android:background="#00ff0000"
-                        android:layout_weight="1"
-
+                        android:layout_marginLeft="12dp"
                         app:srcCompat="@drawable/rectangle_basic" />
 
                 </LinearLayout>
@@ -120,7 +113,7 @@
                     android:id="@+id/POPULAR"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
+                    android:layout_marginLeft="24dp"
                     android:layout_marginTop="18dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="POPULAR"
@@ -131,7 +124,7 @@
                     android:id="@+id/sub3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginLeft="24dp"
                     android:text="A lot of people like it" />
 
                 <LinearLayout
@@ -140,20 +133,18 @@
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="98dp"
-                    android:layout_height="110dp"
+                    android:layout_height="100dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginRight="11dp"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="48dp"
 
                     app:srcCompat="@drawable/rectangle_basic" />
 
                     <ImageView
                         android:id="@+id/imageView5"
                         android:layout_width="207dp"
-                        android:layout_height="110dp"
-
+                        android:layout_height="100dp"
                         android:layout_marginTop="24dp"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
 
                         app:srcCompat="@drawable/rectangle_basic" />
                 </LinearLayout>
@@ -163,9 +154,9 @@
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="98dp"
-                        android:layout_height="110dp"
+                        android:layout_height="100dp"
                         android:layout_marginTop="24dp"
-
+                        android:layout_marginLeft="48dp"
 
                         app:srcCompat="@drawable/rectangle_basic" />
 
