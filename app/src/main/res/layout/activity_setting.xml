@@ -10,21 +10,22 @@
 
     <ImageView
         android:id="@+id/Back1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="24dp"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_rectangle_189" />
+        app:srcCompat="@drawable/rectangle_line" />
 
     <ImageView
         android:id="@+id/Back2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="310dp"
         android:layout_marginEnd="24dp"
@@ -32,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/big_rectangle" />
+        app:srcCompat="@drawable/rectangle_line" />
 
     <ImageButton
         android:id="@+id/GoBack_Btn"
@@ -120,8 +121,8 @@
 
     <ImageView
         android:id="@+id/Line"
-        android:layout_width="312dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="24dp"
@@ -132,8 +133,8 @@
 
     <ImageView
         android:id="@+id/Line2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="253dp"
         android:layout_marginEnd="24dp"
@@ -144,8 +145,8 @@
 
     <ImageView
         android:id="@+id/Line3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="367dp"
         android:layout_marginEnd="24dp"
