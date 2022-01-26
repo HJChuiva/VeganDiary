@@ -39,24 +39,22 @@
                 android:text="WHAT WOULD YOU LIKE TO COOK?"
                 android:textSize="13sp" />
 
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="113dp"
                 android:layout_marginTop="48dp"
-
-
-
                 app:srcCompat="@drawable/rectangle_basic" />
 
-            <ImageView
+            <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="24dp"
-                app:srcCompat="@drawable/ic_line_15" />
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:background="#9E8E89"
+                app:layout_constraintTop_toBottomOf = "@+id/imageView3"
+                tools:layout_editor_absoluteX="1dp" />
 
             <TextView
                 android:id="@+id/RECENTLY_VIEWED"
@@ -108,7 +106,6 @@
                     android:layout_height="145dp"
                     android:background="#00ff0000"
                     android:layout_weight="1"
-
                     app:srcCompat="@drawable/rectangle_basic" />
 
             </LinearLayout>
@@ -148,7 +145,6 @@
                     android:id="@+id/imageView5"
                     android:layout_width="207dp"
                     android:layout_height="110dp"
-
                     android:layout_marginTop="24dp"
                     android:layout_weight="1"
 
@@ -163,8 +159,6 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginRight="11dp"
                     android:layout_weight="1"
-
-
                     app:srcCompat="@drawable/rectangle_basic" />
 
                 <ImageView
