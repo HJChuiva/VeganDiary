@@ -18,7 +18,7 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         Login_Btn = findViewById<Button>(R.id.EditProfile_Btn)
-        edit_ID = findViewById<EditText>(R.id.edit_ID)
+        edit_ID = findViewById<EditText>(R.id.edit_ChallengeTitle)
 
         Login_Btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java) //화면 전환
