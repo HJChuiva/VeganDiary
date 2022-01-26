@@ -38,9 +38,8 @@
         android:id="@+id/GoBack_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="338dp"
         android:layout_marginBottom="60dp"
         android:backgroundTint="@color/backgroud"
         android:tint="#000000"
@@ -96,7 +95,7 @@
         android:id="@+id/settingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="72dp"
         android:fontFamily="@font/roboto_medium"
         android:text="My Page"
@@ -120,7 +119,7 @@
 
     <ImageView
         android:id="@+id/Line"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
@@ -132,7 +131,7 @@
 
     <ImageView
         android:id="@+id/Line2"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="253dp"
@@ -144,7 +143,7 @@
 
     <ImageView
         android:id="@+id/Line3"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="367dp"
