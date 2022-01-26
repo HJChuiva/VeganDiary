@@ -127,7 +127,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val camera = CameraUpdateFactory.newCameraPosition(cameraOption)
 
         mMap.clear() // 이전 마커 삭제
-
         mMap.addMarker(marker)
         mMap.moveCamera(camera)
     }
