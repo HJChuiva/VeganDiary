@@ -98,8 +98,8 @@
                     android:layout_width="98dp"
                     android:layout_height="145dp"
                     android:background="#00ff0000"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginRight="18dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/rectangle_basic" />
                 <ImageButton
@@ -139,7 +139,7 @@
                     android:layout_width="98dp"
                     android:layout_height="110dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginRight="11dp"
                     android:layout_weight="1"
 
                     app:srcCompat="@drawable/rectangle_basic" />
@@ -161,7 +161,7 @@
                     android:layout_width="98dp"
                     android:layout_height="110dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginRight="11dp"
                     android:layout_weight="1"
 
 
