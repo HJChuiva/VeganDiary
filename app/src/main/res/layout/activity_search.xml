@@ -39,17 +39,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/settingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="119dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Category"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_ID"
+        android:layout_width="350dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="540dp"
+        android:background="@drawable/yellow_round"
+        android:ems="10"
+        android:hint="Find your recipes"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SettingText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
