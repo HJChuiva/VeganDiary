@@ -113,8 +113,7 @@
                 android:layout_weight="1"/>
         </LinearLayout>
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp">
@@ -124,12 +123,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:nestedScrollingEnabled="false"
-                android:paddingTop="70dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:ignore="MissingConstraints,NotSibling"
                 tools:listitem="@layout/item_frag_home_linear_list">
             </androidx.recyclerview.widget.RecyclerView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 
     // 하단 메뉴 고정
@@ -187,8 +185,6 @@
             android:background="#00ff0000"
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

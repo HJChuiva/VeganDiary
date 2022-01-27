@@ -163,8 +163,6 @@
         </LinearLayout>
     </ScrollView>
 
-
-
     // 하단 메뉴 고정
 
     <ImageView
