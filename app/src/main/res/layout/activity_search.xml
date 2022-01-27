@@ -57,7 +57,7 @@
         android:id="@+id/Search"
         android:layout_width="350dp"
         android:layout_height="36dp"
-        android:layout_marginBottom="588dp"
+        android:layout_marginBottom="550dp"
         android:background="@drawable/yellow_round"
         android:ems="10"
         android:hint="Find your recipes"
@@ -261,14 +261,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
             android:id="@+id/imageView14"
             android:layout_width="100dp"
             android:layout_height="110dp"
-            android:layout_marginTop="510dp"
             android:layout_marginLeft="50dp"
+            android:layout_marginTop="510dp"
             android:layout_marginRight="0dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/rectangle_basic" />
