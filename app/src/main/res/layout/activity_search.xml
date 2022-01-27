@@ -53,6 +53,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/Search_Button"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="700dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/Search"
         android:layout_width="350dp"
@@ -68,7 +80,8 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SettingText"
-        android:elevation="10dp"/>
+        android:elevation="10dp"
+        />
 
     <ImageView
         android:id="@+id/basicRecipes"
@@ -203,7 +216,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="24dp">>
+        tools:layout_editor_absoluteX="24dp">
 
         <ImageView
             android:id="@+id/imageView13"
@@ -218,6 +231,17 @@
 
 
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="670dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black_line" />
 
     <TextView
         android:id="@+id/BrunchText"
