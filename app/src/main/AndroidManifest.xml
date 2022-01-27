@@ -18,8 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".OnboardingActivity"></activity>
-        <activity android:name=".OnBoardingActivity1" />
-        <activity android:name=".OnBoarding1" />
         <activity android:name=".SignUpActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -33,7 +31,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Login">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,6 +49,9 @@
             </intent-filter>
         </activity>
         -->
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".UsersActivity" />
+
         <activity android:name=".SettingActivity" />
         <activity android:name=".MainActivity" />
         <activity

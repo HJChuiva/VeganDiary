@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:layout_marginTop="89dp"
-            app:srcCompat="@drawable/튜토리얼1" />
+            app:srcCompat="@drawable/tutorial_1" />
 
         <TextView
             android:id="@+id/textView"
