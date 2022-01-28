@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/abc_vector_test" />
 
     <TextView
-        android:id="@+id/SettingText"
+        android:id="@+id/ChellengeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -37,7 +37,6 @@
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/Menu_bar"
@@ -94,6 +93,5 @@
             app:srcCompat="@drawable/menu_setting" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
