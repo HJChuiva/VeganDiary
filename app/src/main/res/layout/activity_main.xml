@@ -24,6 +24,7 @@
         app:menu="@menu/menu"
         app:labelVisibilityMode="unlabeled">
 
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"

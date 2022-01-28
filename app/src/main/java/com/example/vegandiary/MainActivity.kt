@@ -19,7 +19,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-
     private val dashboardFragment = DashboardFragment()
     private val restaurantFragment = RestaurantFragment()
     private val calenderFragment = CalenderFragment()
@@ -38,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             TODO("Not yet implemented")
         }
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
