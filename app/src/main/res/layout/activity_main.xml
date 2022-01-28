@@ -7,217 +7,30 @@
     tools:context=".MainActivity"
     android:background="@color/backgroud">
 
-    <ScrollView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_bar"
+        app:itemIconSize="90dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"
+        app:labelVisibilityMode="unlabeled">
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp">
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/TODAYS_RECIPES"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="56dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="TODAY'S RECIPES"
-                android:textColor="#000000"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/Sub1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
-                android:text="WHAT WOULD YOU LIKE TO COOK?"
-                android:textSize="13sp" />
-
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="113dp"
-                android:layout_marginTop="48dp"
-                app:srcCompat="@drawable/rectangle_basic" />
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="17dp"
-                android:background="#9E8E89"
-                app:layout_constraintTop_toBottomOf = "@+id/imageView3"
-                tools:layout_editor_absoluteX="1dp" />
-
-            <TextView
-                android:id="@+id/RECENTLY_VIEWED"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="RECENTLY VIEWED"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/sub2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="What did I eat?" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/Recipe1"
-                    android:layout_width="98dp"
-                    android:layout_height="145dp"
-                    android:background="#00ff0000"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-
-                <ImageButton
-                    android:id="@+id/Recipe2"
-                    android:layout_width="98dp"
-                    android:layout_height="145dp"
-                    android:background="#00ff0000"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginRight="18dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-
-                <ImageButton
-                    android:id="@+id/Recipe3"
-                    android:layout_width="98dp"
-                    android:layout_height="145dp"
-                    android:background="#00ff0000"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/POPULAR"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="18dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="POPULAR"
-                android:textColor="#000000"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/sub3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="A lot of people like it" />
-
-            <LinearLayout
-                android:layout_height="match_parent"
-                android:layout_width="match_parent">
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="98dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="207dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="50dp">
-                <ImageView
-                    android:layout_width="98dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="207dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic"
-                    android:layout_marginBottom="50dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-
-    // 하단 메뉴 고정
-
-    <ImageView
-        android:id="@+id/Menu_bar"
-        android:layout_width="414dp"
-        android:layout_height="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/menu_bar"
-        android:contentDescription="TODO" />
-
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="55dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00ff0000"
-            app:srcCompat="@drawable/menu_recipe"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="48dp"
-            tools:layout_editor_absoluteY="602dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#00ff0000"
-            app:srcCompat="@drawable/menu_restaurant" />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#00ff0000"
-            app:srcCompat="@drawable/menu_calender" />
-
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#00ff0000"
-            app:srcCompat="@drawable/menu_setting" />
-    </LinearLayout>
-
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,13 +6,28 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat.startActivity
+import androidx.fragment.app.Fragment
+import com.example.vegandiary.Fragment.CalenderFragment
+import com.example.vegandiary.Fragment.DashboardFragment
+import com.example.vegandiary.Fragment.RestaurantFragment
+import com.example.vegandiary.Fragment.SettingFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
 
-    lateinit var imageButton5: ImageButton
+    private val dashboardFragment = DashboardFragment()
+    private val restaurantFragment = RestaurantFragment()
+    private val calenderFragment = CalenderFragment()
+    private val settingFragment = SettingFragment()
+
+    lateinit var bottom_navigation : BottomNavigationView
+
+
 
     inner class myDBHelper(context: Context) : SQLiteOpenHelper(context, "groupDB", null, 1) {
         override fun onCreate(db: SQLiteDatabase?) {
@@ -24,18 +39,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        imageButton5 = findViewById<ImageButton>(R.id.imageButton5)
+        bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        // 비건 식당 페이지로 이동
-        imageButton5.setOnClickListener {
-            val intent = Intent(this, MapsActivity::class.java) //화면 전환
-            startActivity(intent)
+        //replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
+
+        bottom_navigation.setOnNavigationItemSelectedListener{
+            when(it.itemId){
+                R.id.menu_recipe-> replaceFragment(dashboardFragment)
+                R.id.menu_restaurant-> replaceFragment(restaurantFragment)
+                R.id.menu_calender-> replaceFragment(calenderFragment)
+                R.id.menu_setting -> replaceFragment(settingFragment)
+            }
+            true
         }
+    }
 
+    private fun replaceFragment(fragment: Fragment) {
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+        transaction.add(R.id.fragment_container, fragment)
+        transaction.commit()
     }
 }
-
