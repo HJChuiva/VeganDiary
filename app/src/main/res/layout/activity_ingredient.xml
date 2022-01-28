@@ -4,51 +4,195 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud"
     tools:context=".IngredientActivity">
 
-    <ImageButton
-        android:id="@+id/GoBack_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="338dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/backgroud"
-        android:tint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/Back1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/abc_vector_test" />
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        tools:layout_editor_absoluteX="24dp">
 
-    <TextView
-        android:id="@+id/SettingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="22dp"
-        android:fontFamily="@font/roboto"
-        android:text="Recipe"
-        android:textColor="#000000"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/Line"
-        android:layout_width="312dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_line_15" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:backgroundTint="@color/backgroud"
+                    android:tint="#000000"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+                <TextView
+                    android:id="@+id/Recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Recipe"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="17dp"
+                android:background="#9E8E89"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                tools:layout_editor_absoluteX="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Category"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="10000" />
+
+                <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backgroud"
+                    android:gravity="end"
+                    android:tint="#000000"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+                <ImageButton
+                    android:id="@+id/imageButton9"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backgroud"
+                    android:gravity="end"
+                    android:tint="#000000"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+                <ImageButton
+                    android:id="@+id/imageButton10"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backgroud"
+                    android:gravity="end"
+                    android:tint="#000000"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+            </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/Back1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="73dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rectangle_line" />
+
+            <TextView
+                android:id="@+id/Category_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="140dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Category"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Category_behind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="180dp"
+                android:fontFamily="@font/roboto"
+                android:text="explain"
+                android:textColor="#9E8E89"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/menu_bar"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_ellipse_12" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="306dp"
+                android:layout_marginTop="167dp"
+
+                android:backgroundTint="#00000000"
+                app:srcCompat="@drawable/ic_heart" />
+        </RelativeLayout>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#9E8E89"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                tools:layout_editor_absoluteX="1dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <ImageView
         android:id="@+id/Menu_bar"
@@ -59,19 +203,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/menu_bar"
         android:contentDescription="TODO" />
-
-    <TextView
-        android:id="@+id/settingText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="72dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="brunch"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="360dp"
@@ -116,6 +247,5 @@
             android:background="#00ff0000"
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
