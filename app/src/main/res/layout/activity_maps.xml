@@ -80,36 +80,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="스크랩"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="전체"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="한식"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="디저트"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="양식"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="중식"
+                android:textSize="16sp"
                 android:layout_weight="1"/>
         </LinearLayout>
 
