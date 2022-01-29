@@ -39,6 +39,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".DashboardActivity" />
+            android:parentActivityName=".DashboardActivity"/>   //부모 액티비티로 지정
         <activity android:name=".SettingActivity" />
         <activity android:name=".LoginActivity" />
         <activity
