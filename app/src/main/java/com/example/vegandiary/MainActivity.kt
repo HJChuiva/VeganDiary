@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
         bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        //replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
+        replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
 
         bottom_navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){
@@ -58,9 +60,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: Fragment) {
-        val fm = supportFragmentManager
-        val transaction = fm.beginTransaction()
-        transaction.add(R.id.fragment_container, fragment)
-        transaction.commit()
+        if(fragment != null){
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, fragment)
+            transaction.commit()
+        }
     }
 }
