@@ -34,7 +34,7 @@
             android:paddingTop="20dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/imageView2"
+                android:id="@+id/RecipeRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:nestedScrollingEnabled="false"
