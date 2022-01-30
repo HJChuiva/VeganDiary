@@ -1,10 +1,10 @@
-package com.example.vegandiary.sql
+package com.example.vegandiary.Sql
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.vegandiary.model.User
+import com.example.vegandiary.Model.User
 
 // 생성자를 통해 context 객체 받아옴
 class DatabaseHelper(context: Context) :
