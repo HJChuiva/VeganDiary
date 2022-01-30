@@ -35,7 +35,7 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/search_restaurant" />
+            layout="@layout/scroll_search_restaurant" />
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 

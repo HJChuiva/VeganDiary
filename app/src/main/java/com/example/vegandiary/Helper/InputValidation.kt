@@ -1,4 +1,4 @@
-package com.example.vegandiary.helper
+package com.example.vegandiary.Helper
 
 import android.app.Activity
 import android.content.Context

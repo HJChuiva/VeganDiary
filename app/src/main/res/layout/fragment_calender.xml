@@ -43,7 +43,7 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/challenge_memo" />
+            layout="@layout/scroll_challenge_memo" />
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 

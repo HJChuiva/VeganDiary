@@ -1,4 +1,4 @@
-package com.example.vegandiary.model
+package com.example.vegandiary.Model
 
 // 데이터 저장
 class User {

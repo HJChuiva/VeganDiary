@@ -1,11 +1,14 @@
-package com.example.vegandiary
+package com.example.vegandiary.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.vegandiary.R
 
-class Ingredient1Activity : AppCompatActivity() {
+class OnboardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ingredient1)
+        setContentView(R.layout.activity_onboarding)
+
+
     }
 }

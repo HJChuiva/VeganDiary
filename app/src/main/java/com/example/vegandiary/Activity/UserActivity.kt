@@ -1,4 +1,4 @@
-package com.example.vegandiary
+package com.example.vegandiary.Activity
 
 import android.os.Bundle
 import android.view.View

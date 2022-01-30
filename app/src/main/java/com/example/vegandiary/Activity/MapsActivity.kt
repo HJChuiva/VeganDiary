@@ -1,4 +1,4 @@
-package com.example.vegandiary
+package com.example.vegandiary.Activity
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -20,6 +20,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.vegandiary.R
 import com.google.android.gms.location.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {

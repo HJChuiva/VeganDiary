@@ -6,7 +6,7 @@
     android:id="@+id/nestedScrollView"
     android:background="@color/backgroud"
     android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.LoginActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"

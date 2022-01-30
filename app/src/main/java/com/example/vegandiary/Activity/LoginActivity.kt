@@ -1,4 +1,4 @@
-package com.example.vegandiary
+package com.example.vegandiary.Activity
 
 
 import android.content.Intent
@@ -8,8 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.NestedScrollView
-import com.example.vegandiary.helper.InputValidation
-import com.example.vegandiary.sql.DatabaseHelper
+import com.example.vegandiary.R
+import com.example.vegandiary.Helper.InputValidation
+import com.example.vegandiary.Sql.DatabaseHelper
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
