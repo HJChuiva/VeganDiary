@@ -136,18 +136,14 @@
                     android:id="@+id/Category_front"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="130dp"
+                    android:gravity="left"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="140dp"
-                    android:layout_marginEnd="23dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:gravity="center"
                     android:letterSpacing="0.1"
-                    android:text="  Blueberry Scone"
+                    android:text="Tuna mayo-flavored sandwich"
                     android:textColor="#000000"
-                    android:textSize="24sp"
+                    android:textSize="21sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -156,10 +152,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginLeft="105dp"
+                    android:layout_marginLeft="80dp"
                     android:layout_marginTop="180dp"
                     android:fontFamily="@font/roboto"
-                    android:text="Signature dessert menu"
+                    android:text="Delicious and healthy brunch"
                     android:letterSpacing="0.1"
                     android:textColor="#9E8E89"
                     android:textSize="13sp"
@@ -182,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="306dp"
                     android:layout_marginTop="175dp"
+
                     android:backgroundTint="#00000000"
                     app:srcCompat="@drawable/ic_heart" />
             </RelativeLayout>
@@ -290,7 +287,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="505dp"
+                    android:layout_height="370dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -357,17 +354,17 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="40dp"
-                                android:text="재료 섞기"
+                                android:text="병아리콩 삶아 으깨기"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="#000000"
                                 android:textSize="15sp" />
 
                             <TextView
-                                android:layout_width="193dp"
+                                android:layout_width="190dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="5dp"
-                                android:text="볼에 밀가루, 베이킹소다, 베이킹파우더를 섞고 코코넛오일을 조금씩 넣어가며 크럼블을 만든다"
+                                android:text="병아리콩은 2시간 이상 물에 불린 뒤 끓는 물에 삶는다"
                                 android:textColor="#9E8E89"
                                 android:textSize="13sp" />
 
@@ -428,17 +425,17 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="20dp"
-                                android:text="반죽 만들기"
+                                android:text="포크로 으깨기"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="#000000"
                                 android:textSize="15sp" />
 
                             <TextView
-                                android:layout_width="193dp"
+                                android:layout_width="190dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="5dp"
-                                android:text="두유에 설탕을 섞은 뒤 1에 넣어 반죽을 만든다. 마지막으로 블루베리를 넣어 고루 섞는다"
+                                android:text="삶은 병아리콩을 포크로 으깬다"
                                 android:textColor="#9E8E89"
                                 android:textSize="13sp" />
 
@@ -499,17 +496,17 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="20dp"
-                                android:text="휴지시키기"
+                                android:text="마요네즈와 섞기"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="#000000"
                                 android:textSize="15sp" />
 
                             <TextView
-                                android:layout_width="188dp"
+                                android:layout_width="190dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="5dp"
-                                android:text="반죽을 냉장고에 넣어 1시간 가량 둔다"
+                                android:text="으깬 병아리콩에 비건 마요네즈와 다진 피클을 넣어 섞는다"
                                 android:textColor="#9E8E89"
                                 android:textSize="13sp" />
 
@@ -570,7 +567,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="20dp"
-                                android:text="모양 만들기"
+                                android:text="빵에 올리기"
                                 android:fontFamily="@font/roboto_bold"
                                 android:textColor="#000000"
                                 android:textSize="15sp" />
@@ -580,78 +577,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="25dp"
                                 android:layout_marginTop="5dp"
-                                android:text="반죽을 나눠 삼각형으로 모양을 낸 뒤 테플론 시트 위에 올린다"
-                                android:textColor="#9E8E89"
-                                android:textSize="13sp" />
-
-                        </LinearLayout>>
-                    </LinearLayout>>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_marginLeft="30dp"
-                                android:layout_marginTop="20dp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:srcCompat="@drawable/green_round_stroke" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:layout_marginLeft="42dp"
-                                android:layout_marginTop="28dp"
-                                android:fontFamily="@font/roboto"
-                                android:text="step"
-                                android:textColor="#FFFFFF"
-                                android:textSize="13sp"></TextView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:layout_marginLeft="50dp"
-                                android:layout_marginTop="40dp"
-                                android:fontFamily="@font/roboto"
-                                android:text="5"
-                                android:textColor="#FFFFFF"
-                                android:textSize="18sp"></TextView>
-
-                        </RelativeLayout>>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            tools:ignore="MissingConstraints">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginTop="20dp"
-                                android:text="오븐에 굽기"
-                                android:fontFamily="@font/roboto_bold"
-                                android:textColor="#000000"
-                                android:textSize="15sp" />
-
-                            <TextView
-                                android:layout_width="190dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginTop="5dp"
-                                android:text="230도로 예열된 오븐에 15분 가량 구운 뒤 꺼내 식힌다"
+                                android:text="바게트 위에 루콜라를 올리고 참치마요 맛 스프레드를 올린다"
                                 android:textColor="#9E8E89"
                                 android:textSize="13sp" />
 

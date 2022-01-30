@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.CalenderFragment"
-    android:background="@color/backgroud">
+    android:background="@color/backgroud"
+    tools:context=".Fragment.CalenderFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageButton
-        android:id="@+id/GoBack_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="338dp"
-        android:backgroundTint="@color/backgroud"
-        android:tint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/Back1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/abc_vector_test" />
-
     <TextView
-        android:id="@+id/ChellengeText"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="247dp"
-        android:layout_marginBottom="611dp"
-        android:fontFamily="@font/roboto"
-        android:text="Chellange"
-        android:textColor="#000000"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="16dp"
+        android:text="오늘의 다짐을 적어보세요  :)"
+        sothree:layout_constraintEnd_toEndOf="parent"
+        sothree:layout_constraintStart_toStartOf="parent"
+        sothree:layout_constraintTop_toTopOf="parent" />
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/map_sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:gravity="bottom"
+        sothree:layout_constraintBottom_toBottomOf="parent"
+        sothree:layout_constraintEnd_toEndOf="parent"
+        sothree:layout_constraintHorizontal_bias="0.0"
+        sothree:layout_constraintStart_toStartOf="parent"
+        sothree:layout_constraintTop_toBottomOf="@+id/textView4"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="320dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            sothree:layout_constraintTop_toBottomOf="@+id/textView4"></CalendarView>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/challenge_memo" />
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
