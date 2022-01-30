@@ -177,8 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="306dp"
-                    android:layout_marginTop="167dp"
-
+                    android:layout_marginTop="175dp"
                     android:backgroundTint="#00000000"
                     app:srcCompat="@drawable/ic_heart" />
             </RelativeLayout>
