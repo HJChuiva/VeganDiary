@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SearchActivity">
+    tools:context=".Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:paddingTop="20dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/RecipeRecycler"
+                android:id="@+id/scroll_search_recipe"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:nestedScrollingEnabled="false"

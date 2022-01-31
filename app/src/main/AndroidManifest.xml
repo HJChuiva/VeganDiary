@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vegandiary">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -17,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Activity.activity_howtocook1"></activity>
+
+        <activity android:name=".Activity.activity_howtocook1" />
         <activity android:name=".Activity.ChallengeActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -30,17 +32,16 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".Activity.OnboardingActivity"></activity>
+        <activity android:name=".Activity.SplashScreenActivity"
+            tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity.DashboardActivity" />
-            android:parentActivityName=".DashboardActivity"/>   //부모 액티비티로 지정
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity
