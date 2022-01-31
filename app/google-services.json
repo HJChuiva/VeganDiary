@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "138575632220",
+    "project_id": "v-mate-1ccef",
+    "storage_bucket": "v-mate-1ccef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138575632220:android:056c8e6d5bde2bf5799399",
+        "android_client_info": {
+          "package_name": "com.example.vegandiary.Activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138575632220-mn3jsj9ubqo762niguq78l5p7c5s3bap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vegandiary.Activity",
+            "certificate_hash": "8d05dfe59ae93f176f41860df8aa00187d01149a"
+          }
+        },
+        {
+          "client_id": "138575632220-6c59ev1nka2tekidq2gcjab77p5715n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv9NTdhv6R5cYvqq8fUUcrM5dYb5zVR7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138575632220-6c59ev1nka2tekidq2gcjab77p5715n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

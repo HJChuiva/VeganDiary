@@ -1,10 +1,9 @@
-package com.example.vegandiary.Activity
+package com.example.vegandiary
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.vegandiary.R
 
 
 class DashboardActivity : AppCompatActivity()  {
