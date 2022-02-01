@@ -6,10 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.vegandiary.Fragment.CalenderFragment
-import com.example.vegandiary.Fragment.DashboardFragment
-import com.example.vegandiary.Fragment.RestaurantFragment
-import com.example.vegandiary.Fragment.SettingFragment
+import com.example.vegandiary.Fragment.*
 import com.example.vegandiary.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -19,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     private val restaurantFragment = RestaurantFragment() // 비건 식당 화면
     private val calenderFragment = CalenderFragment()     // 챌린지 화면
     private val settingFragment = SettingFragment()       // 설정 화면
+
+    private val searchFragment = SearchFragment()
 
     lateinit var bottom_navigation : BottomNavigationView // 메뉴바
 
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
+        replaceFragment(searchFragment) // 기본 화면 : dashboardFragment
 
         // 하단 네비게이션으로 화면 이동
         bottom_navigation.setOnNavigationItemSelectedListener{
