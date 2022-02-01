@@ -24,7 +24,21 @@ class DashboardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        //SearchTextButton = findViewById<Button>(R.id.SearchTextButton)
     }
+/*
+    lateinit var SearchTextButton: Button
+    lateinit var ScrapButton: Button*/
+
+
+        //SearchTextButton = findViewById<Button>(R.id.SearchTextButton)
+        //ScrapButton = findViewById<Button>(R.id.ScrapButton)
+
+        /* SearchTextButton.setOnClickListener {
+             val intent = Intent(this, SearchActivity::class.java)
+             startActivity(intent)
+
+         }*/
 
     }
 

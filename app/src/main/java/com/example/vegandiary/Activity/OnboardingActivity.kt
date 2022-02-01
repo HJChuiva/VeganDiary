@@ -37,7 +37,8 @@ class OnboardingActivity : AppCompatActivity() {
             {
                 handler.postDelayed({
                 val intent= Intent(this,LoginActivity::class.java)
-                startActivity(intent)},700)
+                startActivity(intent)
+                    finish()},700)
             }
         }
 
