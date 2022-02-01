@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroud">
 
-
+    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +27,8 @@
         android:gravity="bottom"
         sothree:umanoOverlay="true"
         sothree:umanoPanelHeight="220dp"
-        sothree:umanoShadowHeight="0dp">
+        sothree:umanoShadowHeight="0dp"
+        tools:ignore="MissingClass">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,6 +37,7 @@
         <include
             android:id="@+id/include"
             layout="@layout/scroll_search_recipe" />
+
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 

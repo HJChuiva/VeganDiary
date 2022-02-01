@@ -21,6 +21,7 @@ class DashboardActivity : AppCompatActivity()  {
         SearchTextButton.setOnClickListener{
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
+
         }
         ScrapButton.setOnClickListener{
 
