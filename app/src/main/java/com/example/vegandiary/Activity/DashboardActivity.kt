@@ -1,9 +1,10 @@
-package com.example.vegandiary
+package com.example.vegandiary.Activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.vegandiary.R
 
 
 class DashboardActivity : AppCompatActivity()  {
@@ -18,13 +19,10 @@ class DashboardActivity : AppCompatActivity()  {
         SearchTextButton=findViewById<Button>(R.id.SearchTextButton)
         ScrapButton=findViewById<Button>(R.id.ScrapButton)
 
-        SearchTextButton.setOnClickListener{
+        /*SearchTextButton.setOnClickListener{
             val intent = Intent(this, SearchActivity::class.java)
-            startActivity(intent)
+            startActivity(intent)*/
 
         }
-        ScrapButton.setOnClickListener{
 
-        }
     }
-}
