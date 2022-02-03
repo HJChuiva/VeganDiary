@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        replaceFragment(searchFragment) // 기본 화면 : dashboardFragment
+        replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
 
         // 하단 네비게이션으로 화면 이동
         bottom_navigation.setOnNavigationItemSelectedListener{
@@ -64,4 +64,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-

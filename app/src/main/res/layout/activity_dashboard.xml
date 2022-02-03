@@ -24,30 +24,30 @@
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/TODAYS_RECIPES"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="56dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="TODAY'S RECIPES"
-                android:textColor="#000000"
-                android:textSize="24sp" />
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TODAYS_RECIPES"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="56dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="TODAY'S RECIPES"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
 
-            <ImageButton
-                android:id="@+id/ScrapButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="320dp"
+                <ImageButton
+                    android:id="@+id/ScrapButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="320dp"
 
-                android:layout_marginTop="60dp"
-                android:background="#00000000"
-                app:srcCompat="@drawable/green_round_stroke" />
-        </RelativeLayout>
+                    android:layout_marginTop="60dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/green_round_stroke" />
+            </RelativeLayout>
 
 
             <Button
@@ -63,23 +63,14 @@
                 android:text="WHAT WOULD YOU LIKE TO COOK? →"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardBackgroundView"
-                android:layout_width="wrap_content"
-                android:layout_height="133dp"
-                android:layout_marginTop="12dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="0dp"
-                android:backgroundTint="@color/backgroud">
 
-                <ImageView
-                    android:id="@+id/image1"
-                    android:layout_width="match_parent"
-                    android:layout_height="163dp"
-                    android:background="@drawable/rectangle_basic"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/blueberryscone" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:layout_marginTop="24dp"
+                app:srcCompat="@drawable/rectangle_basic" />
+
             <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
@@ -111,64 +102,31 @@
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/recentlyview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="2dp"
-                    android:backgroundTint="@color/backgroud"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                <ImageButton
+                    android:id="@+id/Recipe1"
+                    android:layout_width="98dp"
+                    android:layout_height="145dp"
+                    android:background="#00ff0000"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
 
-                    <ImageButton
-                        android:id="@+id/Recipe1"
-                        android:layout_width="108dp"
-                        android:layout_height="145dp"
-                        android:background="@drawable/rectangle_basic"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/pancake" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/recentlyview2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="2dp"
-                    android:layout_marginLeft="12dp"
-                    android:backgroundTint="@color/backgroud"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
                 <ImageButton
                     android:id="@+id/Recipe2"
-                    android:layout_width="108dp"
+                    android:layout_width="98dp"
                     android:layout_height="145dp"
-                    android:scaleType="fitXY"
-                    android:background="@drawable/rectangle_basic"
-                    app:srcCompat="@drawable/flatbread" />
-                </androidx.cardview.widget.CardView>
+                    android:background="#00ff0000"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/recentlyview3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="2dp"
-                    android:layout_marginLeft="12dp"
-                    android:backgroundTint="@color/backgroud"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
                 <ImageButton
                     android:id="@+id/Recipe3"
-                    android:layout_width="108dp"
+                    android:layout_width="98dp"
                     android:layout_height="145dp"
-                    app:srcCompat="@drawable/ratatouille"
-                    android:scaleType="fitXY"
-                    android:background="@drawable/rectangle_basic"/>
-                </androidx.cardview.widget.CardView>
-
-
+                    android:background="#00ff0000"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
             </LinearLayout>
 
             <TextView
@@ -190,34 +148,22 @@
             <LinearLayout
                 android:layout_height="match_parent"
                 android:layout_width="match_parent">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/recentlyview4"
-                    android:layout_width="98dp"
-                    android:layout_height="110dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="2dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginLeft="12dp"
-                    android:backgroundTint="@color/backgroud"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="118dp"
-                    android:layout_height="110dp"
-                    android:layout_weight="1"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/potato_2" />
-                </androidx.cardview.widget.CardView>
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="118dp"
+                    android:layout_width="98dp"
                     android:layout_height="110dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
 
-                    app:srcCompat="@drawable/yellow_box" />
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="207dp"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/rectangle_basic" />
             </LinearLayout>
 
             <LinearLayout
@@ -241,7 +187,7 @@
                     app:srcCompat="@drawable/rectangle_basic"
                     android:layout_marginBottom="50dp"/>
             </LinearLayout>
-            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

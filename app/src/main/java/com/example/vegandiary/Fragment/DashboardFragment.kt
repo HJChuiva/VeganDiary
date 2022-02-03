@@ -26,7 +26,4 @@ class DashboardFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
-    }
-
-
-
+}

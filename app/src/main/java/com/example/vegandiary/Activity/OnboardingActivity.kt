@@ -1,7 +1,9 @@
 package com.example.vegandiary.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.viewpager2.widget.ViewPager2
 import com.example.vegandiary.Activity.com.example.vegandiary.Intro.IntroRecyclerAdapter
 import com.example.vegandiary.Activity.com.example.vegandiary.Intro.PageItem
@@ -9,6 +11,8 @@ import com.example.vegandiary.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnboardingActivity : AppCompatActivity() {
+
+    lateinit var handler: Handler
 
     companion object{
         const val TAG: String="로그"
@@ -22,11 +26,20 @@ class OnboardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
 
+        handler= Handler()
+
         previous_btn.setOnClickListener{
             my_intro_view_pager.currentItem=my_intro_view_pager.currentItem-1
         }
         next_btn.setOnClickListener{
             my_intro_view_pager.currentItem=my_intro_view_pager.currentItem+1
+            if(my_intro_view_pager.currentItem==2)
+            {
+                handler.postDelayed({
+                val intent= Intent(this,LoginActivity::class.java)
+                startActivity(intent)
+                    finish()},700)
+            }
         }
 
         //데이터 배열을 준비

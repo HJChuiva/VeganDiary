@@ -87,5 +87,7 @@ dependencies {
     // 인디케이터 오픈소스
 
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    //카드뷰
+    implementation 'com.android.support:design:29.0.0'
 
 }
