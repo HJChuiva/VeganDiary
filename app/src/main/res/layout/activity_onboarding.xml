@@ -52,6 +52,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:text="Next"
+        android:backgroundTint="#BECFBC"
         android:background="@drawable/green_round"
         android:fontFamily="@font/roboto_medium"
         android:layout_alignParentStart="true"

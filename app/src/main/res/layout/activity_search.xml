@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".SearchActivity"
     android:background="@color/backgroud">
 
     <RelativeLayout
@@ -15,6 +13,10 @@
         android:layout_marginRight="24dp"
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="0dp">
+
+
+
+
 
         <ImageButton
             android:id="@+id/GoBack_Btn"
@@ -51,7 +53,7 @@
             android:id="@+id/CategoryText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+
             android:layout_marginTop="128dp"
             android:fontFamily="@font/roboto_medium"
             android:text="Category"
@@ -59,6 +61,7 @@
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
 
         <LinearLayout
@@ -88,52 +91,73 @@
                 android:layout_marginTop="10dp"
                 android:background="#F9EAD2"
                 app:srcCompat="@drawable/ic_baseline_search_24" />
+
+
         </LinearLayout>
 
 
-    </RelativeLayout>
+
+
+
+
 
     <ImageView
         android:id="@+id/basicRecipes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+
         android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageButton
+            android:id="@+id/imageButton12"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/basic_recipe" />
 
-    <TextView
-        android:id="@+id/basicRecipes_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="339dp"
-        android:fontFamily="@font/roboto_medium"
-        android:textColor="#9E8E89"
-        android:text="  basic\nrecipes"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/basicRecipes" />
+
+        <TextView
+            android:id="@+id/basicrecipe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="244dp"
+            android:layout_marginEnd="295dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text=" basic\nrecipe"
+            android:textColor="#9E8E89"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/basicRecipes" />
 
     <ImageView
         android:id="@+id/Soup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageButton
+            android:id="@+id/soup_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/soup" />
 
     <TextView
         android:id="@+id/soup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="339dp"
         android:fontFamily="@font/roboto_medium"
         android:text="soup"
@@ -148,18 +172,25 @@
         android:id="@+id/Dessert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageButton
+            android:id="@+id/dessert_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/dessert" />
 
     <TextView
         android:id="@+id/dessert_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="185dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="339dp"
         android:fontFamily="@font/roboto_medium"
         android:text="dessert"
@@ -170,22 +201,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Dessert" />
 
-    <ImageView
-        android:id="@+id/SmoothieBall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="249dp"
-        android:layout_marginTop="180dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageView
+            android:id="@+id/SmoothieBall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="180dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageButton
+            android:id="@+id/smoothieball_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/smoothie_ball" />
 
-    <TextView
+        <TextView
         android:id="@+id/smoothieBall_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="339dp"
         android:fontFamily="@font/roboto_medium"
         android:text=" smoothie\n      ball"
@@ -200,18 +238,25 @@
         android:id="@+id/Brunch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="323dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="180dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_ellipse_14" />
+        <ImageButton
+            android:id="@+id/brunch_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/brunch" />
 
     <TextView
         android:id="@+id/brunch_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="333dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="339dp"
         android:fontFamily="@font/roboto_medium"
         android:text="brunch"
@@ -221,20 +266,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Brunch" />
-
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="670dp"
+        android:layout_width="150dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginRight="129dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/black_line" />
+        app:srcCompat="@drawable/notsearch" />
 
 
-
-
-
-
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

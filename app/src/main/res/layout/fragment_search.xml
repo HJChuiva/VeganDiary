@@ -15,7 +15,11 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/activity_search" />
+            layout="@layout/activity_search"
+            sothree:layout_constraintBottom_toBottomOf="parent"
+            sothree:layout_constraintEnd_toEndOf="parent"
+            sothree:layout_constraintStart_toStartOf="parent"
+            sothree:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
