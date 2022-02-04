@@ -94,72 +94,68 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/bad"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/emo_bad_size"
+                app:srcCompat="@drawable/emo_bad_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/notgood"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_marginLeft="23dp"
-                android:background="@drawable/emo_notgood_size"
+                app:srcCompat="@drawable/emo_notgood_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/soso"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_marginLeft="23dp"
-                android:background="@drawable/emo_soso_size"
+                app:srcCompat="@drawable/emo_soso_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/good"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_marginLeft="23dp"
-                android:background="@drawable/emo_good_size"
+                app:srcCompat="@drawable/emo_good_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/happy"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_marginLeft="23dp"
-                android:background="@drawable/emo_happy_size"
+                app:srcCompat="@drawable/emo_happy_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             </LinearLayout>>
 
-            <Button
-                android:id="@+id/done"
-                android:layout_width="85dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="278dp"
-                android:gravity="center"
-                android:text="Done"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/roboto"
-                android:textAllCaps="false"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonLogin"
+                android:layout_marginLeft="270dp"
+                android:layout_width="83dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/green_round_stroke"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textColor="@color/white"
+                android:text="DONE"/>
+
 
         </LinearLayout>>
     </ScrollView>
