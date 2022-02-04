@@ -1,61 +1,83 @@
 package com.example.vegandiary.Fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.vegandiary.R
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RestaurantFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+class RestaurantFragment : Fragment(), OnMapReadyCallback {
 
-class RestaurantFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var mView: MapView
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_restaurant, container, false)
+        var rootView = inflater.inflate(R.layout.fragment_restaurant, container, false)
+
+        mView = rootView.findViewById(R.id.mv_contactUs_gMap) as MapView
+        mView.onCreate(savedInstanceState)
+        mView.getMapAsync(this)
+
+        return rootView
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RestaurantFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RestaurantFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onMapReady(googleMap: GoogleMap) {
+        // 현재 나의 위치
+        val myLocation = LatLng(37.654601, 127.060530)
+        // 카메라 위치
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation))
+        googleMap.moveCamera(CameraUpdateFactory.zoomTo(15f)) // zoom in
+
+        //마커
+        val marker = MarkerOptions()
+                .position(myLocation)
+                .title("현재 위치")
+        //.snippet("노원역입니다.")
+        googleMap?.addMarker(marker) //지도에 마커 표시
     }
+
+
+    override fun onStart() {
+        super.onStart()
+        mView.onStart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mView.onStop()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mView.onPause()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mView.onLowMemory()
+    }
+
+    override fun onDestroy() {
+        mView.onDestroy()
+        super.onDestroy()
+    }
+
 }
+

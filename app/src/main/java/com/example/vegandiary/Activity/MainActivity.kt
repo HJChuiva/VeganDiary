@@ -10,6 +10,7 @@ import com.example.vegandiary.Fragment.*
 import com.example.vegandiary.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+
 class MainActivity : AppCompatActivity() {
 
     private val dashboardFragment = DashboardFragment()   // 메인 화면

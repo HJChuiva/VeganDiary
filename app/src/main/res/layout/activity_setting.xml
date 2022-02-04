@@ -201,8 +201,12 @@
             android:layout_marginTop="5dp"
             android:background="#00ff0000"
             android:fontFamily="@font/roboto"
-            android:text="회원정보 수정                                              "
+            android:text="회원정보 수정"
             android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:backgroundTint="@color/yellow"
+            style="?android:attr/borderlessButtonStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -214,8 +218,12 @@
             android:layout_marginTop="0dp"
             android:background="#00ff0000"
             android:fontFamily="@font/roboto"
-            android:text="비밀번호 변경                                              "
+            android:text="비밀번호 변경"
             android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:backgroundTint="@color/yellow"
+            style="?android:attr/borderlessButtonStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -227,8 +235,12 @@
             android:layout_marginTop="0dp"
             android:background="#00ff0000"
             android:fontFamily="@font/roboto"
-            android:text="회원탈퇴                                                      "
+            android:text="회원탈퇴"
             android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:backgroundTint="@color/yellow"
+            style="?android:attr/borderlessButtonStyle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
