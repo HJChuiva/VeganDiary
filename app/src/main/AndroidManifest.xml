@@ -33,7 +33,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Activity.OnboardingActivity" />
+
         <activity
             android:name=".Activity.SplashScreenActivity"
             tools:ignore="DuplicateActivity">
@@ -43,11 +43,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.OnboardingActivity" />
         <activity android:name=".Activity.DashboardActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
-        <activity android:name="com.example.veganDiary.Activity.SearchActivity"/>
+        <activity android:name=".Activity.SearchActivity"/>
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />
