@@ -90,28 +90,27 @@
 
             <ImageButton
                 android:id="@+id/edit_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="28dp"
-                android:background="@color/yellow"
+                android:background="@drawable/pen"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/memoEditText"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                 />
 
             <ImageButton
                 android:id="@+id/trash_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="16dp"
-                android:background="@color/yellow"
+                android:background="@drawable/bin"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/edit_button"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
