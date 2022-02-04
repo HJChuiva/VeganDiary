@@ -89,5 +89,10 @@ dependencies {
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
     //카드뷰
     implementation 'com.android.support:design:29.0.0'
+    //동그란 이미지
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //Circle ImageView
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
 
 }
