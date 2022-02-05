@@ -1,61 +1,24 @@
-package com.example.vegandiary.Activity
+package com.example.veganDiary.Activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageButton
+import com.example.vegandiary.Activity.CustomAdapter
 import com.example.vegandiary.R
-import kotlinx.android.synthetic.main.scroll_search_brunch.*
+import com.example.vegandiary.Activity.com.example.vegandiary.sql.RecipeData
+import kotlinx.android.synthetic.main.scroll_search_recipe.*
 
 
 class SearchActivity : AppCompatActivity() {
-
-
-    lateinit var recipe_btn: ImageButton
-    lateinit var restaurant_btn: ImageButton
-    lateinit var calendar_btn:ImageButton
-    lateinit var setting_btn:ImageButton
-
-    lateinit var brunch_btn: ImageButton
-    lateinit var dessert_btn: ImageButton
-
-    lateinit var brunch_btn1:ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        recipe_btn =findViewById<ImageButton>(R.id.recipe_btn)
-        restaurant_btn =findViewById<ImageButton>(R.id.restaurant_btn)
-        calendar_btn =findViewById<ImageButton>(R.id.calendar_btn)
-        setting_btn =findViewById<ImageButton>(R.id.setting_btn)
+        val list = ArrayList<RecipeData>()
+        list.add(RecipeData(null,"Signature brunch menu"))
+        list.add(RecipeData(null,"A picnic menu"))
 
-        brunch_btn=findViewById<ImageButton>(R.id.brunch_btn)
-        dessert_btn=findViewById<ImageButton>(R.id.dessert_btn)
-
-        brunch_btn1 = findViewById<ImageButton>(R.id.brunch_btn1)
-
-        //하단 메뉴바
-        recipe_btn.setOnClickListener{
-            val intent = Intent(this, DashboardActivity::class.java)
-            this.startActivity(intent)
-        }
-        restaurant_btn.setOnClickListener{
-            val intent = Intent(this, MapsActivity::class.java)
-            this.startActivity(intent)
-        }
-        calendar_btn.setOnClickListener{
-            val intent = Intent(this, ChallengeActivity::class.java)
-            this.startActivity(intent)
-        }
-        setting_btn.setOnClickListener{
-            val intent = Intent(this, SettingActivity::class.java)
-            this.startActivity(intent)
-        }
-
-        brunch_btn.setOnClickListener{
-            val intent = Intent(this, SearchbrunchActivity::class.java)
-            this.startActivity(intent)
-        }
+        val adapter=CustomAdapter(list)
+        scroll_search_recipe.adapter=adapter
     }
 }
