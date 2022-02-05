@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.SearchActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,21 +28,6 @@
 
 
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/scroll_search_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:nestedScrollingEnabled="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:ignore="MissingConstraints,NotSibling"
-                tools:listitem="@layout/item_recipe_search">
-            </androidx.recyclerview.widget.RecyclerView>
-        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

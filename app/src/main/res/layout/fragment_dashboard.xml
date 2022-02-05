@@ -72,13 +72,54 @@
                 app:cardElevation="0dp"
                 android:backgroundTint="@color/backgroud">
 
+
                 <ImageView
                     android:id="@+id/image1"
                     android:layout_width="match_parent"
                     android:layout_height="163dp"
-                    android:background="@drawable/rectangle_basic"
                     android:scaleType="fitXY"
                     android:src="@drawable/blueberryscone" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="163dp"
+                    android:background="@drawable/gradient" />
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="How About Breakfast?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginLeft="24dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Blueberry Scone"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/buttonScone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="84dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/black"
+                    android:text="find recipes"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:backgroundTint="#BECFBC"
+                    android:background="@drawable/round_button" />
+
+
             </androidx.cardview.widget.CardView>
             <View
                 android:id="@+id/line"
@@ -123,12 +164,39 @@
 
                     <ImageButton
                         android:id="@+id/Recipe1"
-                        android:layout_width="108dp"
+                        android:layout_width="113dp"
                         android:layout_height="145dp"
                         android:background="@drawable/rectangle_basic"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/pancake" />
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="113dp"
+                        android:layout_height="145dp"
+                        android:background="@drawable/gradient2" />
+                    <TextView
+                        android:id="@+id/text8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Brunch"
+                        android:textColor="#FFF8F8"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/text9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Pankake"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
                 </androidx.cardview.widget.CardView>
+
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/recentlyview2"
@@ -136,17 +204,42 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="2dp"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="9dp"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
                 <ImageButton
                     android:id="@+id/Recipe2"
-                    android:layout_width="108dp"
+                    android:layout_width="113dp"
                     android:layout_height="145dp"
                     android:scaleType="fitXY"
                     android:background="@drawable/rectangle_basic"
                     app:srcCompat="@drawable/flatbread" />
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="113dp"
+                        android:layout_height="145dp"
+                        android:background="@drawable/gradient2" />
+                    <TextView
+                        android:id="@+id/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="dessert"
+                        android:textColor="#FFF8F8"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/text13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Flat Bread"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -155,17 +248,42 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="2dp"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="9dp"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
                 <ImageButton
                     android:id="@+id/Recipe3"
-                    android:layout_width="108dp"
+                    android:layout_width="113dp"
                     android:layout_height="145dp"
                     app:srcCompat="@drawable/ratatouille"
                     android:scaleType="fitXY"
                     android:background="@drawable/rectangle_basic"/>
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="113dp"
+                        android:layout_height="145dp"
+                        android:background="@drawable/gradient2" />
+                    <TextView
+                        android:id="@+id/text10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Brunch"
+                        android:textColor="#FFF8F8"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/text11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Ratatouille"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
                 </androidx.cardview.widget.CardView>
 
 
@@ -192,12 +310,11 @@
                 android:layout_width="match_parent">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/recentlyview4"
-                    android:layout_width="98dp"
+                    android:layout_width="118dp"
                     android:layout_height="110dp"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="2dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginLeft="12dp"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -208,40 +325,181 @@
                     android:layout_weight="1"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/potato_2" />
-                </androidx.cardview.widget.CardView>
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="118dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_weight="1"
 
-                    app:srcCompat="@drawable/yellow_box" />
+                </androidx.cardview.widget.CardView>
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_weight="1"
+
+                        app:srcCompat="@drawable/yellow_box" />
+
+                    <TextView
+                        android:id="@+id/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="soup"
+                        android:textColor="@color/brown"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/text15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Potato Soup"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/text16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="78dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Try it with baguette or flat\nbread"
+                        android:textColor="@color/brown"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="50dp">
-                <ImageView
-                    android:layout_width="98dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/recentlyview5"
+                    android:layout_width="118dp"
                     android:layout_height="110dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/backgroud"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="118dp"
+                    android:layout_height="110dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic" />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/salad" />
+                </androidx.cardview.widget.CardView>
 
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="207dp"
+                    android:layout_width="match_parent"
                     android:layout_height="110dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginLeft="12dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/rectangle_basic"
-                    android:layout_marginBottom="50dp"/>
+
+                    app:srcCompat="@drawable/yellow_box"/>
+
+                    <TextView
+                        android:id="@+id/text17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="salad"
+                        android:textColor="@color/brown"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/text18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Green Salad"
+                        android:textColor="#000000"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/text19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="78dp"
+                        android:layout_marginLeft="36dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Healthy salad that I enjoy\neating in Greece in summer"
+                        android:textColor="@color/brown"
+                        android:textSize="15sp" />
+                </RelativeLayout>
             </LinearLayout>
             </LinearLayout>
     </ScrollView>
+    <ImageView
+        android:id="@+id/Menu_bar"
+        android:layout_width="414dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/menu_bar"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_recipe"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="602dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_restaurant" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_calender" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            app:srcCompat="@drawable/menu_setting" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
