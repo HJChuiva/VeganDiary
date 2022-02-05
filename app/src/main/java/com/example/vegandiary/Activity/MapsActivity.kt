@@ -26,7 +26,10 @@ import com.google.android.gms.location.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    val permissions = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION )
+    val permissions = arrayOf(
+        Manifest.permission.ACCESS_FINE_LOCATION,
+        Manifest.permission.ACCESS_COARSE_LOCATION
+    )
     val PERM_FLAG = 99
 
     private lateinit var mMap: GoogleMap
@@ -35,18 +38,42 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
 
-        if(isPermitted()){
+        if (isPermitted()) {
             startProcess()
-        }else{
+        } else {
             // 권한 요청
             ActivityCompat.requestPermissions(this, permissions, PERM_FLAG)
         }
     }
 
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            PERM_FLAG -> {
+                var check = true
+                for (grant in grantResults) {
+                    if (grant != PERMISSION_GRANTED) {
+                        check = false
+                        break
+                    }
+                }
+                if (check) {
+                    startProcess()
+                } else {
+                    Toast.makeText(this, "권한을 승인해야 앱을 사용할 수 있습니다", Toast.LENGTH_LONG).show()
+                    finish()
+                }
+            }
+        }
+    }
+
     // 권한 체크
-    fun isPermitted() : Boolean {
-        for(perm in permissions){
-            if (ContextCompat.checkSelfPermission(this, perm) != PERMISSION_GRANTED){
+    fun isPermitted(): Boolean {
+        for (perm in permissions) {
+            if (ContextCompat.checkSelfPermission(this, perm) != PERMISSION_GRANTED) {
                 return false
             }
         }
@@ -54,7 +81,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     // 사용 요청
-    fun startProcess(){
+    fun startProcess() {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -67,11 +94,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setUpdateLocationListener()
     }
 
-    fun getDescriptorFromDrawable(drawableId : Int) : BitmapDescriptor {
-        var bitmapDrawable:BitmapDrawable
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+    fun getDescriptorFromDrawable(drawableId: Int): BitmapDescriptor {
+        var bitmapDrawable: BitmapDrawable
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             bitmapDrawable = getDrawable(drawableId) as BitmapDrawable
-        }else{
+        } else {
             bitmapDrawable = resources.getDrawable(drawableId) as BitmapDrawable
         }
         // 마커 크기 변환
@@ -80,21 +107,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     // 내 위치를 가져오는 코드
-    lateinit var fusedLocationClient:FusedLocationProviderClient
-    lateinit var locationCallback:LocationCallback
+    lateinit var fusedLocationClient: FusedLocationProviderClient
+    lateinit var locationCallback: LocationCallback
 
     @SuppressLint("MissingPermission")
-    fun setUpdateLocationListener(){
+    fun setUpdateLocationListener() {
         val locationRequest = LocationRequest.create()
-        locationRequest.run{
+        locationRequest.run {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY // 정확도 높게
             interval = 1000 // 1초에 한번씩 요청
         }
 
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
-                locationResult?.let{
-                    for((i, location) in it.locations.withIndex()){
+                locationResult?.let {
+                    for ((i, location) in it.locations.withIndex()) {
                         Log.d("로케이션", "$i ${location.latitude}, ${location.longitude}")
                         setLastLocation(location)
                     }
@@ -103,11 +130,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         // 로케이션 요청 함수 호출 (locationRequest, locationCallback)
-        fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
+        fusedLocationClient.requestLocationUpdates(
+            locationRequest,
+            locationCallback,
+            Looper.myLooper()
+        )
 
     }
 
-    fun setLastLocation(location : Location){
+    fun setLastLocation(location: Location) {
 
         // 현재 나의 위치
         val myLocation = LatLng(location.latitude, location.longitude)
@@ -127,68 +158,67 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val marker1 = MarkerOptions()
             .position(LatLng(37.636810098806, 127.066396184056))
             .title("502 세컨즈카페")
+            .snippet("양식")
             .icon(descriptor2)
 
         val marker2 = MarkerOptions()
             .position(LatLng(37.6340522250578, 127.051491429932))
             .title("5길반찬")
+            .snippet("한식")
             .icon(descriptor2)
 
         val marker3 = MarkerOptions()
             .position(LatLng(37.6467024983811, 127.083737077543))
             .title("고향보리밥쌈밥")
+            .snippet("한식")
             .icon(descriptor2)
 
         val marker4 = MarkerOptions()
             .position(LatLng(37.624597796799, 127.07649582856))
             .title("굿피자파스타")
+            .snippet("양식")
             .icon(descriptor2)
 
         val marker5 = MarkerOptions()
             .position(LatLng(37.6511256659606, 127.062638552294))
             .title("권순옥김밥")
+            .snippet("한식")
             .icon(descriptor2)
 
         val marker6 = MarkerOptions()
             .position(LatLng(37.6267450093012, 127.087912442601))
             .title("귀빈반점")
+            .snippet("중식")
             .icon(descriptor2)
 
         val marker7 = MarkerOptions()
             .position(LatLng(37.6558595520912, 127.078489309937))
             .title("까르보네 (중계은행사거리점)")
+            .snippet("양식")
             .icon(descriptor2)
 
         val marker8 = MarkerOptions()
             .position(LatLng(37.6227650416546, 127.060063066786))
             .title("꽃제비칼국수")
+            .snippet("한식")
             .icon(descriptor2)
 
         val marker9 = MarkerOptions()
             .position(LatLng(37.6577670301141, 127.062338304855))
             .title("나빈")
+            .snippet("인도/중동")
             .icon(descriptor2)
 
         val marker10 = MarkerOptions()
             .position(LatLng(37.6524383700379, 127.078501126526))
             .title("닐리 (중계점)")
+            .snippet("양식")
             .icon(descriptor2)
-
-
-
-        // 카메라의 위치
-        val cameraPosition = CameraPosition.Builder()
-            .target(myLocation)
-            .zoom(15.0f) // zoom in
-            .build()
-
-        val cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition)
 
 
         mMap.clear() // 이전 마커 삭제
         mMap.addMarker(marker)  // 현재 위치
-        // 식당 위치
-        mMap.addMarker(marker1)
+        mMap.addMarker(marker1) // 식당 위치
         mMap.addMarker(marker2)
         mMap.addMarker(marker3)
         mMap.addMarker(marker4)
@@ -198,30 +228,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(marker8)
         mMap.addMarker(marker9)
         mMap.addMarker(marker10)
-        mMap.moveCamera(cameraUpdate) // 카메라 이동
-    }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        when(requestCode){
-            PERM_FLAG -> {
-                var check = true
-                for(grant in grantResults){
-                    if(grant != PERMISSION_GRANTED){
-                        check = false
-                        break
-                    }
-                }
-                if(check){
-                    startProcess()
-                }else{
-                    Toast.makeText(this,"권한을 승인해야 앱을 사용할 수 있습니다", Toast.LENGTH_LONG).show()
-                    finish()
-                }
-            }
-        }
+        // 카메라의 위치
+        val cameraPosition = CameraPosition.Builder()
+            .target(myLocation)
+            .zoom(15.0f) // zoom in
+            .build()
+
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동
     }
 }
