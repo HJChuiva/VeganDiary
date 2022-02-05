@@ -18,11 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VeganDiary">
-        <activity android:name=".Activity.Ingredient6Activity"></activity>
+        <activity android:name=".Activity.ScrapActivity"></activity>
+        <activity android:name=".Activity.Ingredient6Activity" />
         <activity android:name=".Activity.Ingredient5Activity" />
         <activity android:name=".Activity.Ingredient4Activity" />
         <activity android:name=".Activity.Ingredient3Activity" />
         <activity android:name=".Activity.Ingredient2Activity" />
+        <activity android:name=".Activity.Ingredient1Activity" />
         <activity android:name=".Activity.activity_howtocook1" />
         <activity android:name=".Activity.ChallengeActivity" />
         <activity android:name=".Activity.RegisterActivity" />
@@ -53,7 +55,11 @@
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SearchActivity" />
-        <activity android:name=".Activity.SearchBtnActivity" />
+        <activity android:name=".Activity.SearchFullActivity" />
+        <activity android:name=".Activity.SearchbrunchActivity" />
+        <activity android:name=".Activity.SearchdessertActivity" />
+        <activity android:name=".Activity.ScrollBrunchActivity" />
+
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />

@@ -33,7 +33,7 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/scroll_search_recipe" />
+            layout="@layout/scroll_search_dessert" />
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
     <ImageView

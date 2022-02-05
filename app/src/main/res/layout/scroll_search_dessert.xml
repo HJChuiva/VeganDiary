@@ -51,7 +51,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageButton
-            android:id="@+id/brunch_btn1"
+            android:id="@+id/dessert_btn1"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginStart="100dp"
@@ -173,7 +173,7 @@
             </androidx.cardview.widget.CardView>
 
             <ImageButton
-                android:id="@+id/brunch_btn2"
+                android:id="@+id/dessert_btn2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="100dp"
@@ -292,7 +292,7 @@
             </androidx.cardview.widget.CardView>
 
             <ImageButton
-                android:id="@+id/brunch_btn3"
+                android:id="@+id/dessert_btn3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="100dp"

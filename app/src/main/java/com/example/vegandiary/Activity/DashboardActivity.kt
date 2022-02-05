@@ -5,19 +5,23 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.Activity.SearchActivity
+import com.example.vegandiary.Fragment.RestaurantFragment
 import com.example.vegandiary.R
 
 
 class DashboardActivity : AppCompatActivity()  {
 
     lateinit var SearchTextButton: Button
-    lateinit var ScrapButton: Button
 
     //하단 메뉴바
     lateinit var recipe_btn: android.widget.ImageButton
     lateinit var restaurant_btn: android.widget.ImageButton
     lateinit var calendar_btn:android.widget.ImageButton
     lateinit var setting_btn:android.widget.ImageButton
+
+    lateinit var ScrapButton:android.widget.ImageButton
+
+    private val restaurantFragment = RestaurantFragment() // 비건 식당 화면
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +34,10 @@ class DashboardActivity : AppCompatActivity()  {
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
         //ScrapButton = findViewById<Button>(R.id.ScrapButton)
 
+        ScrapButton=findViewById<android.widget.ImageButton>(R.id.ScrapButton)
+
         SearchTextButton.setOnClickListener {
-            val intent = Intent(this, SearchActivity::class.java)
+            val intent = Intent(this, SearchFullActivity::class.java)
             this.startActivity(intent)
         }
 
@@ -50,6 +56,10 @@ class DashboardActivity : AppCompatActivity()  {
         }
         setting_btn.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
+            this.startActivity(intent)
+        }
+        ScrapButton.setOnClickListener{
+            val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)
         }
 

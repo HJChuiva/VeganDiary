@@ -169,22 +169,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Soup" />
 
-    <ImageView
-        android:id="@+id/Dessert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="180dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_ellipse_14" />
         <ImageButton
             android:id="@+id/dessert_btn"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="145dp"
-            android:layout_marginTop="175dp"
-            android:background="@drawable/dessert" />
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/ic_ellipse_14"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/dessert" />
 
     <TextView
         android:id="@+id/dessert_text"
@@ -199,8 +192,7 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.012"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Dessert" />
+        app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/SmoothieBall"
@@ -236,16 +228,19 @@
         app:layout_constraintTop_toBottomOf="@+id/SmoothieBall" />
 
 
-        <ImageView
+
+
+        <ImageButton
             android:id="@+id/brunch_btn"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="180dp"
-            app:srcCompat="@drawable/brunch"
-            android:background="@drawable/ic_ellipse_14"/>
+            android:background="@drawable/ic_ellipse_14"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/brunch" />
 
-    <TextView
+        <TextView
         android:id="@+id/brunch_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
