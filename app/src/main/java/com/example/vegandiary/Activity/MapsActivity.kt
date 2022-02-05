@@ -111,25 +111,93 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 현재 나의 위치
         val myLocation = LatLng(location.latitude, location.longitude)
 
-        // 마커 아이콘 만들기
-        val descriptor = getDescriptorFromDrawable(R.drawable.marker)
 
-        // 마커
+        // 마커 아이콘 만들기
+        val descriptor = getDescriptorFromDrawable(R.drawable.marker) // 현재 위치 (RED)
+        val descriptor2 = getDescriptorFromDrawable(R.drawable.marker3) // 식당 위치 (BROWN)
+
+        // 현재 위치 마커
         val marker = MarkerOptions()
             .position(myLocation)
             .title("현재 위치")
             .icon(descriptor)
 
+        // 식당 위치 마커
+        val marker1 = MarkerOptions()
+            .position(LatLng(37.636810098806, 127.066396184056))
+            .title("502 세컨즈카페")
+            .icon(descriptor2)
+
+        val marker2 = MarkerOptions()
+            .position(LatLng(37.6340522250578, 127.051491429932))
+            .title("5길반찬")
+            .icon(descriptor2)
+
+        val marker3 = MarkerOptions()
+            .position(LatLng(37.6467024983811, 127.083737077543))
+            .title("고향보리밥쌈밥")
+            .icon(descriptor2)
+
+        val marker4 = MarkerOptions()
+            .position(LatLng(37.624597796799, 127.07649582856))
+            .title("굿피자파스타")
+            .icon(descriptor2)
+
+        val marker5 = MarkerOptions()
+            .position(LatLng(37.6511256659606, 127.062638552294))
+            .title("권순옥김밥")
+            .icon(descriptor2)
+
+        val marker6 = MarkerOptions()
+            .position(LatLng(37.6267450093012, 127.087912442601))
+            .title("귀빈반점")
+            .icon(descriptor2)
+
+        val marker7 = MarkerOptions()
+            .position(LatLng(37.6558595520912, 127.078489309937))
+            .title("까르보네 (중계은행사거리점)")
+            .icon(descriptor2)
+
+        val marker8 = MarkerOptions()
+            .position(LatLng(37.6227650416546, 127.060063066786))
+            .title("꽃제비칼국수")
+            .icon(descriptor2)
+
+        val marker9 = MarkerOptions()
+            .position(LatLng(37.6577670301141, 127.062338304855))
+            .title("나빈")
+            .icon(descriptor2)
+
+        val marker10 = MarkerOptions()
+            .position(LatLng(37.6524383700379, 127.078501126526))
+            .title("닐리 (중계점)")
+            .icon(descriptor2)
+
+
+
         // 카메라의 위치
-        val cameraOption = CameraPosition.Builder()
+        val cameraPosition = CameraPosition.Builder()
             .target(myLocation)
             .zoom(15.0f) // zoom in
             .build()
-        val camera = CameraUpdateFactory.newCameraPosition(cameraOption)
+
+        val cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition)
+
 
         mMap.clear() // 이전 마커 삭제
-        mMap.addMarker(marker)
-        mMap.moveCamera(camera)
+        mMap.addMarker(marker)  // 현재 위치
+        // 식당 위치
+        mMap.addMarker(marker1)
+        mMap.addMarker(marker2)
+        mMap.addMarker(marker3)
+        mMap.addMarker(marker4)
+        mMap.addMarker(marker5)
+        mMap.addMarker(marker6)
+        mMap.addMarker(marker7)
+        mMap.addMarker(marker8)
+        mMap.addMarker(marker9)
+        mMap.addMarker(marker10)
+        mMap.moveCamera(cameraUpdate) // 카메라 이동
     }
 
     override fun onRequestPermissionsResult(
