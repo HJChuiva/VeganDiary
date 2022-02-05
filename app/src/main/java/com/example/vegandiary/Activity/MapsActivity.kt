@@ -23,6 +23,7 @@ import androidx.core.content.ContextCompat
 import com.example.vegandiary.R
 import com.google.android.gms.location.*
 
+
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     val permissions = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION )
