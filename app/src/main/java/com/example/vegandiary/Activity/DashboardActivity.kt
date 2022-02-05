@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.vegandiary.Activity.SearchActivity
 import com.example.vegandiary.Fragment.RestaurantFragment
 import com.example.vegandiary.R
 
