@@ -1,6 +1,7 @@
 package com.example.vegandiary.Activity
 
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
@@ -38,7 +39,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        val intentRegister = Intent(applicationContext, DashboardActivity::class.java)
+        startActivity(intentRegister)
+
+
+       /* bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
         replaceFragment(dashboardFragment) // 기본 화면 : dashboardFragment
 
@@ -61,6 +67,6 @@ class MainActivity : AppCompatActivity() {
             val transaction = supportFragmentManager.beginTransaction() // 프래그먼트 트랜잭션 시작
             transaction.replace(R.id.fragment_container, fragment) // 프래그먼트 교체
             transaction.commit() //프래그먼트 작동
-        }
+        }*/
     }
 }

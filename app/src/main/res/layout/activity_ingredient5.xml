@@ -81,27 +81,9 @@
                     android:layout_height="0dp"
                     android:layout_weight="10000" />
 
-                <ImageButton
-                    android:id="@+id/imageButton8"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/backgroud"
-                    android:gravity="end"
-                    android:tint="#000000"
-                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
 
-                <ImageButton
-                    android:id="@+id/imageButton9"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/backgroud"
-                    android:gravity="end"
-                    android:tint="#000000"
-                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+
 
                 <ImageButton
                     android:id="@+id/imageButton10"
@@ -157,12 +139,16 @@
                     android:id="@+id/Category_front"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
                     android:layout_marginLeft="130dp"
                     android:layout_marginTop="150dp"
+                    android:layout_marginEnd="23dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:text="Pankake"
+                    android:gravity="center"
                     android:letterSpacing="0.1"
+                    android:text="Chick Pea Popcorn"
                     android:textColor="#000000"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -173,23 +159,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_marginLeft="110dp"
+                    android:layout_marginLeft="105dp"
                     android:layout_marginTop="185dp"
                     android:fontFamily="@font/roboto"
+                    android:text="Signature dessert menu"
                     android:letterSpacing="0.1"
-                    android:text="Signature brunch menu"
                     android:textColor="#9E8E89"
                     android:textSize="13sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <ImageView
                     android:id="@+id/imagerecipe"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
                     android:layout_marginLeft="100dp"
-                    app:srcCompat="@drawable/round1" />
+                    app:srcCompat="@drawable/round5" />
 
                 <ImageButton
                     android:id="@+id/imageButton11"
@@ -302,7 +287,7 @@
                 <ImageView
                     android:id="@+id/Back2"
                     android:layout_width="match_parent"
-                    android:layout_height="540dp"
+                    android:layout_height="400dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -330,7 +315,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/flour"
+                            app:srcCompat="@drawable/cheak_pea"
                             android:background="@drawable/green_round_stroke"/>
 
                         <TextView
@@ -339,7 +324,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="55dp"
-                            android:text="floar"
+                            android:text="cheak pea"
                             android:textColor="#000000"
                             android:textSize="13sp" />
 
@@ -347,9 +332,9 @@
                             android:id="@+id/amount1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="160dp"
+                            android:layout_marginLeft="120dp"
                             android:layout_marginTop="55dp"
-                            android:text="1 cup"
+                            android:text="3 cup"
                             android:textColor="#000000"
                             android:textSize="13sp" />
                     </LinearLayout>>
@@ -367,7 +352,7 @@
                             android:layout_marginTop="20dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/sugar"
+                            app:srcCompat="@drawable/cooking_oil"
                             android:background="@drawable/green_round_stroke" />
 
                         <TextView
@@ -376,7 +361,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="35dp"
-                            android:text="sugar"
+                            android:text="olive oil"
                             android:textColor="#000000"
                             android:textSize="13sp" />
 
@@ -384,9 +369,9 @@
                             android:id="@+id/amount2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="110dp"
+                            android:layout_marginLeft="95dp"
                             android:layout_marginTop="35dp"
-                            android:text="2 tablespoon"
+                            android:text="3 tablespoon"
                             android:textColor="#000000"
                             android:textSize="13sp" />
                     </LinearLayout>>
@@ -404,7 +389,7 @@
                             android:layout_marginTop="20dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/baking_powder"
+                            app:srcCompat="@drawable/paprika_powder"
                             android:background="@drawable/green_round_stroke" />
 
                         <TextView
@@ -413,7 +398,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="35dp"
-                            android:text="baking powder"
+                            android:text="paprika powder"
                             android:textColor="#000000"
                             android:textSize="13sp" />
 
@@ -421,9 +406,9 @@
                             android:id="@+id/amount3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="60dp"
+                            android:layout_marginLeft="50dp"
                             android:layout_marginTop="35dp"
-                            android:text="2 tablespoon"
+                            android:text="1 tablespoon"
                             android:textColor="#000000"
                             android:textSize="13sp" />
                     </LinearLayout>>
@@ -434,33 +419,34 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/IngreImage4"
+                            android:id="@+id/IngreImage9"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginLeft="30dp"
                             android:layout_marginTop="20dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/salt"
                             android:background="@drawable/green_round_stroke" />
 
                         <TextView
-                            android:id="@+id/ingre4"
+                            android:id="@+id/ingre9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
-                            android:layout_marginTop="35dp"
+                            android:layout_marginTop="36dp"
                             android:text="salt"
                             android:textColor="#000000"
                             android:textSize="13sp" />
 
                         <TextView
-                            android:id="@+id/amount4"
+                            android:id="@+id/amount9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="140dp"
+                            android:layout_marginLeft="115dp"
                             android:layout_marginTop="35dp"
-                            android:text="a little bit"
+                            android:text="2 tablespoon"
                             android:textColor="#000000"
                             android:textSize="13sp" />
                     </LinearLayout>>
@@ -479,7 +465,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/soymilk"
+                            app:srcCompat="@drawable/pepper"
                             android:background="@drawable/green_round_stroke" />
 
                         <TextView
@@ -488,50 +474,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="25dp"
                             android:layout_marginTop="35dp"
-                            android:text="soymilk"
+                            android:text="pepper"
                             android:textColor="#000000"
                             android:textSize="13sp" />
 
                         <TextView
                             android:id="@+id/amount5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="135dp"
-                            android:layout_marginTop="35dp"
-                            android:text="1 cup"
-                            android:textColor="#000000"
-                            android:textSize="13sp" />
-                    </LinearLayout>>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/IngreImage6"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="20dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/vinegar"
-                            android:background="@drawable/green_round_stroke" />
-
-                        <TextView
-                            android:id="@+id/ingre6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="35dp"
-                            android:text="vinegar"
-                            android:textColor="#000000"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amount6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="95dp"
@@ -540,47 +488,6 @@
                             android:textColor="#000000"
                             android:textSize="13sp" />
                     </LinearLayout>>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:id="@+id/IngreImage7"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="20dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/cooking_oil"
-                            android:background="@drawable/green_round_stroke" />
-
-                        <TextView
-                            android:id="@+id/ingre7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="25dp"
-                            android:layout_marginTop="35dp"
-                            android:text="cooking oil"
-                            android:textColor="#000000"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/amount7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="115dp"
-                            android:layout_marginTop="35dp"
-                            android:text="1 cup"
-                            android:textColor="#000000"
-                            android:textSize="13sp" />
-                    </LinearLayout>>
-
-
-
 
                 </LinearLayout>>
 

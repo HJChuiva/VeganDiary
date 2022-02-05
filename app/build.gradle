@@ -77,7 +77,8 @@ dependencies {
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:29.0.4')
 
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    //리사이클러뷰
+    implementation "androidx.recyclerview:recyclerview:1.1.0"       //androidx 버전
     implementation 'androidx.cardview:cardview:1.0.0'
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
@@ -93,6 +94,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0' //Circle ImageView
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
 
 
 }

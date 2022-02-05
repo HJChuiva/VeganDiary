@@ -44,7 +44,7 @@
         android:background="@color/backgroud"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next_btn"
         android:layout_width="match_parent"
         android:layout_height="40dp"

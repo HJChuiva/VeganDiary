@@ -29,6 +29,7 @@ class RecipeAdapter(val recipeList:ArrayList<Recipes>):
         holder.name.text=recipeList.get(position).name
         holder.detail.text=recipeList.get(position).detail
 
+
     }
 
     override fun getItemCount(): Int {

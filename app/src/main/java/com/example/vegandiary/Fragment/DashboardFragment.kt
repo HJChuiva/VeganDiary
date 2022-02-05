@@ -1,5 +1,6 @@
 package com.example.vegandiary.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,6 +25,14 @@ class DashboardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+      /*SearchTextButton.setOnClickListener {
+
+            val intent= Intent(activity,SearchFragment::class.java)
+            startActivity(intent)
+        }*/
+
+
     }
 
 }
