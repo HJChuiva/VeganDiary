@@ -113,7 +113,7 @@
                     android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/appCompatButtonLogin"
+                    android:id="@+id/FindRecipe_btn"
                     android:layout_width="135dp"
                     android:layout_height="29dp"
                     android:layout_marginLeft="220dp"
