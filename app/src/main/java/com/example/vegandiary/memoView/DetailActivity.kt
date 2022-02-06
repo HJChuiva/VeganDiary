@@ -40,9 +40,6 @@ class DetailActivity : AppCompatActivity() {
         delBtn.setOnClickListener {//Delete버튼 클릭시
             showDialog() //showDialog함수 실행
         }
-        copy_Button.setOnClickListener {//copy버튼 클릭시
-            clipBoard()//clipBoard함수실행
-        }
     }
 
     /*클립보드에 복사하는 함수*/

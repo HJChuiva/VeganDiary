@@ -31,8 +31,6 @@ class MemoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memo)
 
-        timeView.text = dateFormat
-
         memoDb = MemoDb.getInstance(this)// Db에 접근을 가능하게 해줌
         memoAdapter = RcViewAdapter(this, memoList)
 
