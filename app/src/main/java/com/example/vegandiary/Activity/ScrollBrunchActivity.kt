@@ -20,6 +20,7 @@ class ScrollBrunchActivity : AppCompatActivity() {
         brunch_btn1.setOnClickListener {
             val intent = Intent(this, Ingredient1Activity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
     }
 }

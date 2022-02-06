@@ -20,6 +20,7 @@ class activity_howtocook1 : AppCompatActivity() {
         Ingredient_btn.setOnClickListener{
             val intent = Intent(this, Ingredient1Activity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
     }
 }

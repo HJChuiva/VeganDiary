@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         val intentRegister = Intent(applicationContext, DashboardActivity::class.java)
         startActivity(intentRegister)
+        overridePendingTransition(0, 0); //애니메이션 없애기
 
 
        /* bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)

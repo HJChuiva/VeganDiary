@@ -17,6 +17,7 @@ class SplashScreenActivity : AppCompatActivity() {
         handler.postDelayed({
             val intent=Intent(this,OnboardingActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
             finish()
         }, 3000)
     }

@@ -99,7 +99,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/emo_bad_size"
+                    app:srcCompat="@drawable/btn_setting"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

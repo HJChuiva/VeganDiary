@@ -41,24 +41,29 @@ class DashboardActivity : AppCompatActivity()  {
         SearchTextButton.setOnClickListener {
             val intent = Intent(this, SearchFullActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
         //하단 메뉴바
         recipe_btn.setOnClickListener{
             val intent = Intent(this, DashboardActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         restaurant_btn.setOnClickListener{
-            val intent = Intent(this, FoodActivity::class.java)
+            val intent = Intent(this, MapsActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         calendar_btn.setOnClickListener{
             val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         setting_btn.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
 
@@ -66,11 +71,13 @@ class DashboardActivity : AppCompatActivity()  {
         ScrapButton.setOnClickListener{
             val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
         FindRecipe_btn.setOnClickListener{
             val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
     }

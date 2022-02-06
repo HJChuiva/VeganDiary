@@ -29,14 +29,17 @@ class SearchdessertActivity : AppCompatActivity() {
             brunch_btn.setOnClickListener {
                 val intent = Intent(this, SearchbrunchActivity::class.java)
                 this.startActivity(intent)
+                overridePendingTransition(0, 0); //애니메이션 없애기
             }
             dessert_btn.setOnClickListener {
                 val intent = Intent(this, SearchdessertActivity::class.java)
                 this.startActivity(intent)
+                overridePendingTransition(0, 0); //애니메이션 없애기
             }
             GoBack_Btn.setOnClickListener {
                 val intent = Intent(this, DashboardActivity::class.java)
                 this.startActivity(intent)
+                overridePendingTransition(0, 0); //애니메이션 없애기
             }
         }
     }
