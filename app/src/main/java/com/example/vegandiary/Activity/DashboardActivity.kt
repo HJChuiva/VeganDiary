@@ -13,6 +13,7 @@ class DashboardActivity : AppCompatActivity()  {
 
     lateinit var SearchTextButton: Button
 
+    lateinit var FindRecipe_btn:Button
     //하단 메뉴바
     lateinit var recipe_btn: android.widget.ImageButton
     lateinit var restaurant_btn: android.widget.ImageButton
@@ -32,6 +33,8 @@ class DashboardActivity : AppCompatActivity()  {
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
+
+        FindRecipe_btn=findViewById<Button>(R.id.FindRecipe_btn)
 
         ScrapButton=findViewById<android.widget.ImageButton>(R.id.ScrapButton)
 
@@ -61,6 +64,11 @@ class DashboardActivity : AppCompatActivity()  {
 
 
         ScrapButton.setOnClickListener{
+            val intent = Intent(this, ScrapActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        FindRecipe_btn.setOnClickListener{
             val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)
         }
