@@ -7,7 +7,8 @@
     xmlns:attrs="http://schemas.android.com/apk/res-auto"
     tools:context=".Activity.OnboardingActivity"
     android:orientation="vertical"
-    android:layout_centerInParent="true">
+    android:layout_centerInParent="true"
+    android:background="@color/backgroud">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/my_intro_view_pager"

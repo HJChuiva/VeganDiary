@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Ingredient1Activity">
+    tools:context=".Activity.Ingredient1Activity"
+    android:background="@color/backgroud">
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -190,19 +191,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3"
                 tools:layout_editor_absoluteX="1dp" />
 
-            //tip
             <Button
                 android:id="@+id/tip"
-                android:layout_width="45dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="58dp"
                 android:layout_height="35dp"
-                android:gravity="center"
                 android:layout_marginLeft="320dp"
-                android:fontFamily="@font/roboto"
                 android:backgroundTint="@color/backgroud"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
                 android:text="tip"
                 android:textColor="#9E8E89"
-                android:textSize="13sp"
-                style="?android:attr/borderlessButtonStyle" />
+                android:textSize="13sp" />
+
 
             <TextView
                 android:id="@+id/CookingStep"

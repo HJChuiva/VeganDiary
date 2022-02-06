@@ -265,7 +265,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 카메라의 위치
         val cameraPosition = CameraPosition.Builder()
             .target(myLocation)
-            .zoom(14.0f) // zoom in
+            .zoom(12.0f) // zoom in
             .build()
 
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동
