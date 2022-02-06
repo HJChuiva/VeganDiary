@@ -15,9 +15,6 @@
         tools:layout_editor_absoluteY="0dp">
 
 
-
-
-
         <ImageButton
             android:id="@+id/GoBack_Btn"
             android:layout_width="wrap_content"
