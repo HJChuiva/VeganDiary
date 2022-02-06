@@ -40,7 +40,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Activity.SplashScreenActivity"
+            android:name=".memoView.MemoActivity"
             tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,6 +58,10 @@
         <activity android:name=".Activity.SearchdessertActivity" />
         <activity android:name=".Activity.ScrapActivity" />
         <activity android:name=".Activity.ScrollBrunchActivity" />
+
+        <activity android:name=".memoView.AddActivity"/>
+        <activity android:name=".memoView.DetailActivity"/>
+
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />
