@@ -12,7 +12,8 @@ import com.example.vegandiary.db.MemoDao
 abstract class MemoDb: RoomDatabase() {
     abstract fun MemoDao(): MemoDao
 
-    companion object { //DB제작
+    companion object {
+        //DB제작
         private var INSTANCE: MemoDb? = null
 
         fun getInstance(context: Context): MemoDb? {
