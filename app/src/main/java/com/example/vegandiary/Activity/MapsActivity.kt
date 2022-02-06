@@ -2,6 +2,7 @@ package com.example.vegandiary.Activity
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -11,6 +12,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -28,13 +30,23 @@ import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
+    // 하단 메뉴바
+    lateinit var recipe_btn: android.widget.ImageButton
+    lateinit var restaurant_btn: android.widget.ImageButton
+    lateinit var calendar_btn:android.widget.ImageButton
+    lateinit var setting_btn:android.widget.ImageButton
+
+    // 구글 지도
+    private lateinit var mMap: GoogleMap
+
+
     val permissions = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.ACCESS_COARSE_LOCATION
     )
     val PERM_FLAG = 99
 
-    private lateinit var mMap: GoogleMap
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +57,30 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         } else {
             // 권한 요청
             ActivityCompat.requestPermissions(this, permissions, PERM_FLAG)
+        }
+
+
+        //하단 메뉴바
+        recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
+        restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
+        calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
+        setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
+
+        recipe_btn.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            this.startActivity(intent)
+        }
+        restaurant_btn.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            this.startActivity(intent)
+        }
+        calendar_btn.setOnClickListener{
+            val intent = Intent(this, ChallengeActivity::class.java)
+            this.startActivity(intent)
+        }
+        setting_btn.setOnClickListener{
+            val intent = Intent(this, SettingActivity::class.java)
+            this.startActivity(intent)
         }
     }
 
