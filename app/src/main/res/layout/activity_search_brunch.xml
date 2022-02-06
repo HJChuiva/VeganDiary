@@ -57,6 +57,9 @@
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 
+
+
+    </RelativeLayout>
     <ImageView
         android:id="@+id/Menu_bar"
         android:layout_width="414dp"
@@ -111,9 +114,6 @@
             android:background="#00ff0000"
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
-
-
-    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

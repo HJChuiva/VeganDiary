@@ -49,7 +49,7 @@ class DashboardActivity : AppCompatActivity()  {
             this.startActivity(intent)
         }
         restaurant_btn.setOnClickListener{
-            val intent = Intent(this, MapsActivity::class.java)
+            val intent = Intent(this, FoodActivity::class.java)
             this.startActivity(intent)
         }
         calendar_btn.setOnClickListener{
