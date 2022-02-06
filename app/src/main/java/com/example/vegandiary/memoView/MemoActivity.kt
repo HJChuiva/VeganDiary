@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vegandiary.R
 import com.example.vegandiary.db.Memo
 import com.example.vegandiary.db.MemoDb
+import com.example.vegandiary.db.RcViewAdapter
 import kotlinx.android.synthetic.main.activity_memo.*
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MemoActivity : AppCompatActivity() {
+
     private var memoDb: MemoDb? = null
     private var memoList = listOf<Memo>()
     private lateinit var memoAdapter: RcViewAdapter

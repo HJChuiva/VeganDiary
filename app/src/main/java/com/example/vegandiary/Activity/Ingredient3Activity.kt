@@ -8,6 +8,11 @@ import com.example.vegandiary.R
 
 class Ingredient3Activity : AppCompatActivity() {
     lateinit var tip: Button
+
+    lateinit var recipe_btn: android.widget.ImageButton
+    lateinit var restaurant_btn: android.widget.ImageButton
+    lateinit var calendar_btn:android.widget.ImageButton
+    lateinit var setting_btn:android.widget.ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient3)
