@@ -39,7 +39,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     // 구글 지도
     private lateinit var mMap: GoogleMap
 
-
+    // 현재 위치
     val permissions = arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
         Manifest.permission.ACCESS_COARSE_LOCATION
@@ -52,11 +52,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
 
+        // 권한 체크
         if (isPermitted()) {
             startProcess()
         } else {
-            // 권한 요청
-            ActivityCompat.requestPermissions(this, permissions, PERM_FLAG)
+            ActivityCompat.requestPermissions(this, permissions, PERM_FLAG) // 권한 요청
         }
 
 
@@ -84,6 +84,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    // 권한 승인
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -128,7 +129,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         maps_view.visibility = View.INVISIBLE; // 카드뷰 안보이게
-
 
 
         // 현재 위치
@@ -229,10 +229,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         var marker1 = LatLng(37.636810098806, 127.066396184056)
         mMap.addMarker(MarkerOptions().position(marker1!!).title("502 세컨즈카페").snippet("양식").icon(descriptor2))
 
-
         marker1 = LatLng(37.6340522250578, 127.051491429932)
         mMap.addMarker(MarkerOptions().position(marker1).title("5길반찬").snippet("한식").icon(descriptor2))
-
 
         marker1 = LatLng(37.6467024983811, 127.083737077543)
         mMap.addMarker(MarkerOptions().position(marker1).title("고향보리밥쌈밥").snippet("한식").icon(descriptor2))
@@ -262,14 +260,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 카메라의 위치
         val cameraPosition = CameraPosition.Builder()
             .target(myLocation)
-            .zoom(15.0f) // zoom in
+            .zoom(12.0f) // zoom in
             .build()
 
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동
-        // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker1, 15f)) //지도를 14배율로 확대해서 보여줌
-
     }
-
-
-
 }

@@ -26,8 +26,6 @@
             android:layout_gravity="center|top">
         </ImageView>
 
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
