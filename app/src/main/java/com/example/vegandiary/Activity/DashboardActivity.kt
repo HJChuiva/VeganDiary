@@ -32,7 +32,6 @@ class DashboardActivity : AppCompatActivity()  {
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
-        //ScrapButton = findViewById<Button>(R.id.ScrapButton)
 
         ScrapButton=findViewById<android.widget.ImageButton>(R.id.ScrapButton)
 
@@ -58,6 +57,9 @@ class DashboardActivity : AppCompatActivity()  {
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
         }
+
+
+
         ScrapButton.setOnClickListener{
             val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)

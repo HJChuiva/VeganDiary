@@ -90,4 +90,12 @@
             android:background="#00ff0000"
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
+    <ImageView
+        android:id="@+id/teduri"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        sothree:srcCompat="@drawable/ic_teduri"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="172dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

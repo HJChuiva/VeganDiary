@@ -7,17 +7,29 @@ import android.view.Gravity
 import android.widget.Button
 import android.widget.Toast
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.MemoActivity
 
 class Ingredient1Activity : AppCompatActivity() {
 
     lateinit var tip: Button
     lateinit var Howtocook_btn : Button
 
+    lateinit var recipe_btn: android.widget.ImageButton
+    lateinit var restaurant_btn: android.widget.ImageButton
+    lateinit var calendar_btn:android.widget.ImageButton
+    lateinit var setting_btn:android.widget.ImageButton
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient1)
+
+        recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
+        restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
+        calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
+        setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
         tip=findViewById<Button>(R.id.tip)
         Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
@@ -28,6 +40,24 @@ class Ingredient1Activity : AppCompatActivity() {
         }
         Howtocook_btn.setOnClickListener{
             val intent = Intent(this, activity_howtocook1::class.java)
+            this.startActivity(intent)
+        }
+
+        //하단 메뉴바
+        recipe_btn.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            this.startActivity(intent)
+        }
+        restaurant_btn.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            this.startActivity(intent)
+        }
+        calendar_btn.setOnClickListener{
+            val intent = Intent(this, MemoActivity::class.java)
+            this.startActivity(intent)
+        }
+        setting_btn.setOnClickListener{
+            val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
         }
     }
