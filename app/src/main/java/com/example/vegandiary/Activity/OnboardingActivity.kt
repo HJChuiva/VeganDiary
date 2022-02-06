@@ -46,18 +46,18 @@ class OnboardingActivity : AppCompatActivity() {
         //데이터 배열을 준비
         pageItemList.add(PageItem(R.color.backgroud, R.drawable.intro_1,
             "Get Healthy Recipes",
-        "다양한 비건 레시피들을 찾아 나의 것으로 만드세요!",
-        "Next"))
+        "다양한 비건 레시피들을 찾아 나의 것으로 만드세요!"
+        ))
         pageItemList.add(PageItem(R.color.backgroud, R.drawable.intro_2,
             "Challenge Vegan Life",
             "비건 관련 습관을 기록합니다!\n" +
-                    "나만의 비건 다이어리를 가꾸어보세요",
-            "Next"))
+                    "나만의 비건 다이어리를 가꾸어보세요"
+            ))
         pageItemList.add(PageItem(R.color.backgroud, R.drawable.intro_3,
             "Find Your Vegan Restaurant",
             "당신 주변의 비건 식당을 추천해드립니다!\n" +
-                    "건강한 음식을 만나보세요",
-            "Sign In"))
+                    "건강한 음식을 만나보세요"
+            ))
 
         //어댑터 인스턴스 생성
         IntroRecyclerAdapter=IntroRecyclerAdapter(pageItemList)
