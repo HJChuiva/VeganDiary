@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.Fragment.RestaurantFragment
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.MemoActivity
 
 
 class DashboardActivity : AppCompatActivity()  {
@@ -50,7 +51,7 @@ class DashboardActivity : AppCompatActivity()  {
             this.startActivity(intent)
         }
         calendar_btn.setOnClickListener{
-            val intent = Intent(this, ChallengeActivity::class.java)
+            val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
         }
         setting_btn.setOnClickListener{
