@@ -60,7 +60,7 @@
 
         <activity android:name=".memoView.AddActivity"/>
         <activity android:name=".memoView.DetailActivity"/>
-
+        <activity android:name=".memoView.MemoActivity"/>
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />
