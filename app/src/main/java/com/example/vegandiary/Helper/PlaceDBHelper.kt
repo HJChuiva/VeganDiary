@@ -14,11 +14,9 @@ class PlaceDBHelper(
     override fun onCreate(db: SQLiteDatabase?) {
 
         db!!.execSQL("CREATE TABLE placeTBL ( pName CHAR(20) PRIMARY KEY, pKind CHAR(20), lat INTEGER, lng INTEGER);")
-
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
     }
-
 }

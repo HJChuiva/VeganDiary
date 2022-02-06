@@ -39,11 +39,6 @@ class AddActivity : AppCompatActivity() {
                 finish()
             }
         }
-
-        bad.setOnClickListener {
-
-        }
-
     }
 
     override fun onDestroy() {

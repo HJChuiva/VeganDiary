@@ -16,11 +16,11 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:src="@drawable/logo"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutName"
@@ -32,6 +32,7 @@
                 android:id="@+id/textInputEditTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/backgroud"
                 android:hint="Name"
                 android:inputType="text"
                 android:maxLines="1" />
@@ -47,6 +48,7 @@
                 android:id="@+id/textInputEditTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/backgroud"
                 android:hint="Email"
                 android:inputType="text"
                 android:maxLines="1" />
@@ -62,6 +64,7 @@
                 android:id="@+id/textInputEditTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/backgroud"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:maxLines="1" />
@@ -77,6 +80,7 @@
                 android:id="@+id/textInputEditTextConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/backgroud"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
                 android:maxLines="1" />
@@ -95,9 +99,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/appCompatTextViewLoginLink"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="로그인"
+            android:text="Already a member? Login"
             android:textSize="16sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

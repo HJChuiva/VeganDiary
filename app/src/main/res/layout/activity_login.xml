@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroud"
+    android:padding="20dp"
     tools:context=".Activity.LoginActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -19,7 +20,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
-            android:src="@drawable/intro_splash"/>
+            android:src="@drawable/logo"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmail"

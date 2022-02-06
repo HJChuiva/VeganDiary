@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/backgroud"
-    tools:context=".Activity.ChallengeActivity">
+    android:backgroundTint="@color/backgroud">
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -101,6 +100,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     app:srcCompat="@drawable/emo_bad_size"
+                    android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,6 +111,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
                     app:srcCompat="@drawable/emo_notgood_size"
+                    android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,6 +122,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
                     app:srcCompat="@drawable/emo_soso_size"
+                    android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,6 +133,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
                     app:srcCompat="@drawable/emo_good_size"
+                    android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,6 +144,7 @@
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
                     app:srcCompat="@drawable/emo_happy_size"
+                    android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
