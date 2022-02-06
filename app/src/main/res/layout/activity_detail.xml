@@ -170,9 +170,10 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
+                    android:backgroundTint="#00000000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/emo_bad_size" />
+                    app:srcCompat="@drawable/btn_setting" />
 
                 <ImageButton
                     android:id="@+id/notgood"
@@ -180,9 +181,10 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="23dp"
                     android:gravity="center"
+                    android:backgroundTint="#00000000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/emo_notgood_size" />
+                    app:srcCompat="@drawable/btn_setting2" />
 
                 <ImageButton
                     android:id="@+id/soso"
@@ -190,9 +192,10 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="23dp"
                     android:gravity="center"
+                    android:backgroundTint="#00000000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/emo_soso_size" />
+                    app:srcCompat="@drawable/btn_setting3" />
 
                 <ImageButton
                     android:id="@+id/good"
@@ -200,9 +203,10 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="23dp"
                     android:gravity="center"
+                    android:backgroundTint="#00000000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/emo_good_size" />
+                    app:srcCompat="@drawable/btn_setting4" />
 
                 <ImageButton
                     android:id="@+id/happy"
@@ -210,9 +214,10 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="23dp"
                     android:gravity="center"
+                    android:backgroundTint="#00000000"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/emo_happy_size" />
+                    app:srcCompat="@drawable/btn_setting5" />
             </LinearLayout>
 
 

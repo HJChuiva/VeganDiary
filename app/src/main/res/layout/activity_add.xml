@@ -110,7 +110,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
-                    app:srcCompat="@drawable/emo_notgood_size"
+                    app:srcCompat="@drawable/btn_setting2"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -121,7 +121,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
-                    app:srcCompat="@drawable/emo_soso_size"
+                    app:srcCompat="@drawable/btn_setting3"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -132,7 +132,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
-                    app:srcCompat="@drawable/emo_good_size"
+                    app:srcCompat="@drawable/btn_setting4"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -143,7 +143,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:layout_marginLeft="23dp"
-                    app:srcCompat="@drawable/emo_happy_size"
+                    app:srcCompat="@drawable/btn_setting5"
                     android:backgroundTint="@color/backgroud"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
