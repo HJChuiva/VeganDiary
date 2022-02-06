@@ -7,6 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.vegandiary.Activity.DashboardActivity
+import com.example.vegandiary.Activity.MapsActivity
+import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.db.Memo
 import com.example.vegandiary.db.MemoDb
@@ -15,6 +18,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_memo.*
 import java.lang.Exception
 import java.text.SimpleDateFormat
+import android.widget.Button
+import android.widget.ImageButton
 import java.util.*
 
 class MemoActivity : AppCompatActivity() {
@@ -22,6 +27,12 @@ class MemoActivity : AppCompatActivity() {
     private var memoList = listOf<Memo>()
     private lateinit var memoAdapter: RcViewAdapter
     private var mBackWait: Long = 0
+
+    //하단 메뉴바
+    lateinit var recipe_btn: ImageButton
+    lateinit var restaurant_btn: ImageButton
+    lateinit var calendar_btn:ImageButton
+    lateinit var setting_btn:ImageButton
 
     private val currentDateTime = Calendar.getInstance().time
     private var dateFormat = SimpleDateFormat("yyyy.MM.dd", Locale.KOREA).format(currentDateTime)
@@ -33,6 +44,11 @@ class MemoActivity : AppCompatActivity() {
 
         memoDb = MemoDb.getInstance(this)// Db에 접근을 가능하게 해줌
         memoAdapter = RcViewAdapter(this, memoList)
+
+        recipe_btn =findViewById<ImageButton>(R.id.recipe_btn)
+        restaurant_btn =findViewById<ImageButton>(R.id.restaurant_btn)
+        calendar_btn =findViewById<ImageButton>(R.id.calendar_btn)
+        setting_btn =findViewById<ImageButton>(R.id.setting_btn)
 
         val r = Runnable {
             try {
@@ -61,6 +77,25 @@ class MemoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //하단 메뉴바
+        recipe_btn.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            this.startActivity(intent)
+        }
+        restaurant_btn.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            this.startActivity(intent)
+        }
+        calendar_btn.setOnClickListener{
+            val intent = Intent(this, MemoActivity::class.java)
+            this.startActivity(intent)
+        }
+        setting_btn.setOnClickListener{
+            val intent = Intent(this, SettingActivity::class.java)
+            this.startActivity(intent)
+        }
+
+
     }
 
     override fun onDestroy() {
@@ -80,4 +115,6 @@ class MemoActivity : AppCompatActivity() {
             android.os.Process.killProcess(android.os.Process.myPid()) //앱, 프로세스까지 강제종료
         }
     }
+
+
 }

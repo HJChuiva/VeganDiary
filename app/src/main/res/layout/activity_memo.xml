@@ -99,7 +99,7 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/recipe_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00ff0000"
@@ -109,7 +109,7 @@
             tools:layout_editor_absoluteY="602dp" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/restaurant_btn"
             android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,7 +117,7 @@
             app:srcCompat="@drawable/menu_restaurant" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/calendar_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,7 +125,7 @@
             app:srcCompat="@drawable/menu_calender" />
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/setting_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

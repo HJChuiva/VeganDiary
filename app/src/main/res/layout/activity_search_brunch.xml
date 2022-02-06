@@ -29,10 +29,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
             <include
                 android:id="@+id/include"
                 layout="@layout/activity_search" />
+                <ImageView
+                    android:id="@+id/teduri"
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
+                    sothree:srcCompat="@drawable/ic_teduri"
+                    android:layout_marginTop="172dp"
+                    android:layout_marginLeft="314dp"
+                    tools:layout_editor_absoluteX="315dp"
+                    tools:layout_editor_absoluteY="172dp" />
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -99,16 +112,7 @@
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/teduri"
-        android:layout_width="80dp"
-        android:layout_height="75dp"
-        sothree:srcCompat="@drawable/ic_teduri"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="172dp"
-        android:layout_marginLeft="314dp"
-        tools:layout_editor_absoluteX="315dp"
-        tools:layout_editor_absoluteY="172dp" />
+
     </RelativeLayout>
 
 
