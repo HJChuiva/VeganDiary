@@ -70,18 +70,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         recipe_btn.setOnClickListener{
             val intent = Intent(this, DashboardActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         restaurant_btn.setOnClickListener{
             val intent = Intent(this, MapsActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         calendar_btn.setOnClickListener{
             val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
         setting_btn.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
     }
 
@@ -184,7 +188,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val locationRequest = LocationRequest.create()
         locationRequest.run {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY // 정확도 높게
-            interval = 1000 * 60 // 1분에 한번씩 요청
+            interval = 1000 * 30 // 30초에 한번씩 요청
         }
 
         locationCallback = object : LocationCallback() {
@@ -261,7 +265,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 카메라의 위치
         val cameraPosition = CameraPosition.Builder()
             .target(myLocation)
-            .zoom(12.0f) // zoom in
+            .zoom(14.0f) // zoom in
             .build()
 
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동

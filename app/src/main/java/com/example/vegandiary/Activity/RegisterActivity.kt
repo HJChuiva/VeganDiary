@@ -120,7 +120,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             // Snack Bar to show success message that record saved successfully
             Snackbar.make(
                 nestedScrollView!!,
-                "Registration Successful",
+                "Registration Successful!",
                 Snackbar.LENGTH_LONG
             ).show()
             emptyInputEditText()
@@ -128,7 +128,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             // Snack Bar to show error message that record already exists
             Snackbar.make(
                 nestedScrollView!!,
-                "Email Already Exists",
+                "Email Already Exists!",
                 Snackbar.LENGTH_LONG
             ).show()
         }

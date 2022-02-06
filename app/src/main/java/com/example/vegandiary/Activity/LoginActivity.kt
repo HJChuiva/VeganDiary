@@ -62,6 +62,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             R.id.textViewLinkRegister -> {
                 val intentRegister = Intent(applicationContext, RegisterActivity::class.java)
                 startActivity(intentRegister)
+                overridePendingTransition(0, 0); //애니메이션 없애기
             }
         }
     }
@@ -92,7 +93,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 textInputEditTextEmail!!.text.toString().trim { it <= ' ' },
                 textInputEditTextPassword!!.text.toString().trim { it <= ' ' })
         ) {
-            val accountsIntent = Intent(activity, MainActivity::class.java)
+            val accountsIntent = Intent(activity, MainActivity::class.java) // 메인화면 시작
             accountsIntent.putExtra(
                 "EMAIL",
                 textInputEditTextEmail!!.text.toString().trim { it <= ' ' })

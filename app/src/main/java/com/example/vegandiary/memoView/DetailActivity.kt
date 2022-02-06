@@ -1,14 +1,10 @@
 package com.example.vegandiary.memoView
 
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.example.vegandiary.R
@@ -42,17 +38,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    /*클립보드에 복사하는 함수*/
-    private fun clipBoard() {
-
-        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText("label", watch_edit_content.text.toString())
-        clipboardManager!!.setPrimaryClip(clipData)
-
-        Toast.makeText(this, "클립보드에 복사되었습니다", Toast.LENGTH_SHORT).show()
-    }
-
-    /*다이얼로그창을 보여주는 함수*/
+    // 다이얼로그창을 보여주는 함수
     private fun showDialog() {
 
         val delRunnable = Runnable { // delRunnable 쓰레드 제작
@@ -60,6 +46,7 @@ class DetailActivity : AppCompatActivity() {
                 ?.delete(title + "", contents + "") //OnClickListener에서 delRunnable쓰레드로 이동
         }
 
+        // 삭제 경고 문구
         val alertDialog = AlertDialog.Builder(this)
             .setTitle("삭제")
             .setMessage("정말 삭제하시겠습니까? \n" + "한번 삭제하면 복구 할 수 없습니다")
