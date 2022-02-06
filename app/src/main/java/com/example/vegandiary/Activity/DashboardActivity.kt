@@ -3,7 +3,10 @@ package com.example.vegandiary.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.vegandiary.Activity.Recipe.Ingredient4Activity
 import com.example.vegandiary.Fragment.RestaurantFragment
 import com.example.vegandiary.R
 import com.example.vegandiary.memoView.MemoActivity
@@ -24,9 +27,19 @@ class DashboardActivity : AppCompatActivity()  {
 
     private val restaurantFragment = RestaurantFragment() // 비건 식당 화면
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
+        val count_num=findViewById<TextView>(R.id.hearttext1)
+        val count_num2=findViewById<TextView>(R.id.hearttext2)
+        val heartbtn=findViewById<ImageButton>(R.id.heart1)
+        val heartbtn2=findViewById<ImageButton>(R.id.heart2)
+        var count1=0
+        var count2=0
+
+
 
         SearchTextButton = findViewById<Button>(R.id.SearchTextButton)
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
@@ -75,10 +88,20 @@ class DashboardActivity : AppCompatActivity()  {
         }
 
         FindRecipe_btn.setOnClickListener{
-            val intent = Intent(this, ScrapActivity::class.java)
+            val intent = Intent(this, Ingredient4Activity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+
+        heartbtn.setOnClickListener{
+            count1++
+            count_num.text=count1.toString()
+        }
+        heartbtn2.setOnClickListener{
+            count2++
+            count_num2.text=count2.toString()
+        }
+
 
     }
 }

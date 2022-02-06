@@ -380,6 +380,23 @@
                         android:textColor="@color/brown"
                         android:textSize="15sp" />
 
+                    <ImageButton
+                        android:id="@+id/heart1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginLeft="156dp"
+                        android:backgroundTint="#00000000"
+                        app:srcCompat="@drawable/ic_heart" />
+
+                    <TextView
+                        android:id="@+id/hearttext1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginLeft="195dp"
+                        android:text="0" />
+
 
                 </RelativeLayout>
 
@@ -452,6 +469,22 @@
                         android:text="Healthy salad that I enjoy\neating in Greece in summer"
                         android:textColor="@color/brown"
                         android:textSize="15sp" />
+                    <ImageButton
+                        android:id="@+id/heart2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginLeft="156dp"
+                        android:backgroundTint="#00000000"
+                        app:srcCompat="@drawable/ic_heart" />
+
+                    <TextView
+                        android:id="@+id/hearttext2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginLeft="195dp"
+                        android:text="0" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
