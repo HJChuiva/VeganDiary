@@ -17,7 +17,5 @@ class MyPagerViewholder(itemView: View): RecyclerView.ViewHolder(itemView) {
         itemImage.setImageResource(pageItem.image)
         itemText1.text=pageItem.text1
         itemText2.text=pageItem.text2
-
-
     }
 }
