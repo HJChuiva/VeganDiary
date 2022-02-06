@@ -298,7 +298,7 @@
         android:layout_height="55dp"
         android:orientation="horizontal"
         android:layout_marginTop="605dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -315,7 +315,7 @@
 
         <ImageButton
             android:id="@+id/restaurant_btn"
-            android:layout_width="108dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#00ff0000"
