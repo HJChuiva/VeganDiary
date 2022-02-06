@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.MemoActivity
 
 
 class SettingActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class SettingActivity : AppCompatActivity() {
             this.startActivity(intent)
         }
         restaurant_btn.setOnClickListener{
-            val intent = Intent(this, ChallengeActivity::class.java)
+            val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
         }
         calendar_btn.setOnClickListener{

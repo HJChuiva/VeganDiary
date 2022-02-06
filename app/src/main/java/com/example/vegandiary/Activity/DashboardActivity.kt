@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.Fragment.RestaurantFragment
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.MemoActivity
 
 
 class DashboardActivity : AppCompatActivity()  {
@@ -31,7 +32,6 @@ class DashboardActivity : AppCompatActivity()  {
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
-        //ScrapButton = findViewById<Button>(R.id.ScrapButton)
 
         ScrapButton=findViewById<android.widget.ImageButton>(R.id.ScrapButton)
 
@@ -50,13 +50,16 @@ class DashboardActivity : AppCompatActivity()  {
             this.startActivity(intent)
         }
         calendar_btn.setOnClickListener{
-            val intent = Intent(this, ChallengeActivity::class.java)
+            val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
         }
         setting_btn.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
         }
+
+
+
         ScrapButton.setOnClickListener{
             val intent = Intent(this, ScrapActivity::class.java)
             this.startActivity(intent)

@@ -25,7 +25,6 @@
         <activity android:name=".Activity.Ingredient2Activity" />
         <activity android:name=".Activity.Ingredient1Activity" />
         <activity android:name=".Activity.activity_howtocook1" />
-        <activity android:name=".Activity.ChallengeActivity" />
         <activity android:name=".Activity.RegisterActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -40,7 +39,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".memoView.MemoActivity"
+            android:name=".Activity.SplashScreenActivity"
             tools:ignore="DuplicateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

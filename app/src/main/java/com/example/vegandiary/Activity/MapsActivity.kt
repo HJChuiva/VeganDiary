@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.MemoActivity
 import com.google.android.gms.location.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -75,7 +76,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             this.startActivity(intent)
         }
         calendar_btn.setOnClickListener{
-            val intent = Intent(this, ChallengeActivity::class.java)
+            val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
         }
         setting_btn.setOnClickListener{

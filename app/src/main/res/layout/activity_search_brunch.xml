@@ -8,6 +8,11 @@
     tools:context=".Activity.MainActivity"
     android:background="@color/backgroud">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/map_sliding_layout"
         android:layout_width="match_parent"
@@ -16,6 +21,7 @@
         sothree:umanoOverlay="true"
         sothree:umanoPanelHeight="450dp"
         sothree:umanoShadowHeight="0dp">
+
 
 
         <LinearLayout
@@ -36,6 +42,7 @@
             layout="@layout/scroll_search_brunch" />
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
 
     <ImageView
         android:id="@+id/Menu_bar"
@@ -91,4 +98,18 @@
             android:background="#00ff0000"
             app:srcCompat="@drawable/menu_setting" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/teduri"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        sothree:srcCompat="@drawable/ic_teduri"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="172dp"
+        android:layout_marginLeft="314dp"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="172dp" />
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
