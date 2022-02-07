@@ -8,6 +8,7 @@ import com.example.vegandiary.R
 
 class SplashScreenActivity : AppCompatActivity() {
 
+    //스플래시 스크린 화면 호출
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +20,6 @@ class SplashScreenActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
             finish()
-        }, 3000)
+        }, 3000)            //3000 시간이 지나면 호출
     }
 }

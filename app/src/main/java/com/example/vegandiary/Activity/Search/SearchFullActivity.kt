@@ -11,6 +11,7 @@ class SearchFullActivity : AppCompatActivity() {
 
     //선택하지 않은 초반 레시피 검색 초반 화면
 
+    //버튼 선언
     lateinit var brunch_btn: ImageButton
     lateinit var dessert_btn: ImageButton
     lateinit var GoBack_Btn:ImageButton
@@ -23,6 +24,7 @@ class SearchFullActivity : AppCompatActivity() {
         dessert_btn = findViewById<ImageButton>(R.id.dessert_btn)
         GoBack_Btn = findViewById<ImageButton>(R.id.GoBack_Btn)
 
+        //카테고리 선택 버튼 이벤트
         brunch_btn.setOnClickListener {
             val intent = Intent(this, SearchbrunchActivity::class.java)
             this.startActivity(intent)

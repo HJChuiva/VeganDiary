@@ -28,13 +28,14 @@ class SettingActivity : AppCompatActivity() {
         val nameFromIntent = intent.getStringExtra("EMAIL")
         textViewName!!.text = "Welcome $nameFromIntent"
 
-        //하단 메뉴바
+        //하단 메뉴바 이미지버튼 id 받아오기
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
 
+        //하단 메뉴바 버튼 클릭 이벤트
         recipe_btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
