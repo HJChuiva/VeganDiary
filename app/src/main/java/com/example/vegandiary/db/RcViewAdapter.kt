@@ -6,9 +6,12 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vegandiary.R
+import com.example.vegandiary.memoView.AddActivity
 import com.example.vegandiary.memoView.DetailActivity
 
 class RcViewAdapter(private val context: Context, private val memos: List<Memo>) :
@@ -28,20 +31,26 @@ class RcViewAdapter(private val context: Context, private val memos: List<Memo>)
                 i.putExtra("content", memo.content)
                 itemView.context.startActivity(i)
             }
+
         }
+
     }
 
+    //
     override fun getItemCount(): Int {
         return memos.size
     }
-
+    //
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_memo, parent, false)
         return Holder(view)
     }
-
+    //
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder?.bind(memos[position])
+
     }
+
+
 
 }

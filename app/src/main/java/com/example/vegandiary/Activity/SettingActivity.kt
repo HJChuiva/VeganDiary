@@ -1,5 +1,6 @@
 package com.example.vegandiary.Activity
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
@@ -25,18 +26,19 @@ class SettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
-        textViewName = findViewById<View>(R.id.ProfileName) as TextView
+        textViewName = findViewById<TextView>(R.id.ProfileName) as TextView
         val nameFromIntent = intent.getStringExtra("EMAIL")
         textViewName!!.text = "Welcome $nameFromIntent"
 
+        //하단 메뉴바
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
-        //하단 메뉴바
+
         recipe_btn.setOnClickListener{
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
@@ -58,7 +60,7 @@ class SettingActivity : AppCompatActivity() {
 
     }
 
-
+        //SQLiteOpenHelper
     class myDBHelper(context: Context?) : SQLiteOpenHelper(context, "groupDB", null, 1) {
         override fun onCreate(db: SQLiteDatabase) {
             db.execSQL("CREATE TABLE groupTBL ( gName CHAR(20) PRIMARY KEY,gNumber INTEGER);")
