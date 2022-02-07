@@ -2,17 +2,19 @@ package com.example.vegandiary.memoView
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.vegandiary.Activity.DashboardActivity
+import com.example.vegandiary.Activity.MapsActivity
+import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.db.Memo
 import com.example.vegandiary.db.MemoDb
 import com.example.vegandiary.db.RcViewAdapter
 import kotlinx.android.synthetic.main.activity_memo.*
-import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -26,6 +28,11 @@ class MemoActivity : AppCompatActivity() {
     private val currentDateTime = Calendar.getInstance().time
     private var dateFormat = SimpleDateFormat("yyyy.MM.dd", Locale.KOREA).format(currentDateTime)
 
+    lateinit var recipe_btn: android.widget.ImageButton
+    lateinit var restaurant_btn: android.widget.ImageButton
+    lateinit var calendar_btn:android.widget.ImageButton
+    lateinit var setting_btn:android.widget.ImageButton
+
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,13 +41,19 @@ class MemoActivity : AppCompatActivity() {
         memoDb = MemoDb.getInstance(this)// Db에 접근을 가능하게 해줌
         memoAdapter = RcViewAdapter(this, memoList)
 
+        recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
+        restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
+        calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
+        setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
+
+
         val r = Runnable {
             try {
                 Log.d("TAG", "Hello")
 
                 memoList = memoDb?.MemoDao()?.getAll()!!
                 memoAdapter =
-                    RcViewAdapter(this, memoList)
+                        RcViewAdapter(this, memoList)
                 memoAdapter.notifyDataSetChanged()
 
                 runOnUiThread { // 일반 쓰레드 -> Main쓰레드가 처리하게 만듬
@@ -59,6 +72,27 @@ class MemoActivity : AppCompatActivity() {
         delBtn.setOnClickListener {//delete버튼을 누를시 행동
             var intent = Intent(this, AddActivity::class.java)
             startActivity(intent)
+        }
+        //하단 메뉴바
+        recipe_btn.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
+        }
+        restaurant_btn.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
+        }
+        calendar_btn.setOnClickListener{
+            val intent = Intent(this, MemoActivity::class.java)
+            this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
+        }
+        setting_btn.setOnClickListener{
+            val intent = Intent(this, SettingActivity::class.java)
+            this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
     }
@@ -80,4 +114,5 @@ class MemoActivity : AppCompatActivity() {
             android.os.Process.killProcess(android.os.Process.myPid()) //앱, 프로세스까지 강제종료
         }
     }
+
 }
