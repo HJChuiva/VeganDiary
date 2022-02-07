@@ -1,9 +1,10 @@
-package com.example.vegandiary.Activity
+package com.example.vegandiary.Activity.Search
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import com.example.vegandiary.Activity.MainActivity
 import com.example.vegandiary.Activity.Recipe.Ingredient1Activity
 import com.example.vegandiary.Activity.Recipe.Ingredient2Activity
 import com.example.vegandiary.Activity.Recipe.Ingredient3Activity

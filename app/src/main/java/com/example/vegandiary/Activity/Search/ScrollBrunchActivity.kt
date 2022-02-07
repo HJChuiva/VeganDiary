@@ -1,5 +1,5 @@
 
-package com.example.vegandiary.Activity
+package com.example.vegandiary.Activity.Search
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

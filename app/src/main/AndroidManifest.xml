@@ -54,15 +54,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.OnboardingActivity" />
-        <activity android:name=".Activity.DashboardActivity" />
+        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.SearchFullActivity" />
-        <activity android:name=".Activity.SearchbrunchActivity" />
-        <activity android:name=".Activity.SearchdessertActivity" />
+        <activity android:name=".Activity.Search.SearchFullActivity" />
+        <activity android:name=".Activity.Search.SearchbrunchActivity" />
+        <activity android:name=".Activity.Search.SearchdessertActivity" />
         <activity android:name=".Activity.ScrapActivity" />
-        <activity android:name=".Activity.ScrollBrunchActivity" />
+        <activity android:name=".Activity.Search.ScrollBrunchActivity" />
         <activity android:name=".memoView.AddActivity" />
         <activity android:name=".memoView.DetailActivity" />
         <activity android:name=".memoView.MemoActivity" />
