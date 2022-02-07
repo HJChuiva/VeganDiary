@@ -42,7 +42,6 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="320dp"
-
                     android:layout_marginTop="60dp"
                     android:background="#00000000"
                     app:srcCompat="@drawable/green_round_stroke" />

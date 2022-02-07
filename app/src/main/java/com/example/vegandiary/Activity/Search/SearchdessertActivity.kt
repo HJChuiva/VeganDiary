@@ -35,6 +35,7 @@ class SearchdessertActivity : AppCompatActivity() {
             dessert_btn2=findViewById<ImageButton>(R.id.dessert_btn2)
             dessert_btn3=findViewById<ImageButton>(R.id.dessert_btn3)
 
+            //setOnClickListener 이벤트 호출
             brunch_btn.setOnClickListener {
                 val intent = Intent(this, SearchbrunchActivity::class.java)
                 this.startActivity(intent)
@@ -51,6 +52,7 @@ class SearchdessertActivity : AppCompatActivity() {
                 overridePendingTransition(0, 0); //애니메이션 없애기
             }
 
+            //메뉴 클릭 이벤트
             dessert_btn1.setOnClickListener {
                 val intent = Intent(this, Ingredient4Activity::class.java)
                 this.startActivity(intent)

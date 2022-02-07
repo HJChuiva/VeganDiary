@@ -12,7 +12,7 @@ import com.example.vegandiary.R
 
 
 class SearchbrunchActivity : AppCompatActivity() {
-    //슬라이딩 패널 구현
+    //슬라이딩 패널
 
     //버튼 선언
     lateinit var brunch_btn: ImageButton
@@ -38,7 +38,7 @@ class SearchbrunchActivity : AppCompatActivity() {
         brunch_btn2=findViewById<ImageButton>(R.id.brunch_btn2)
         brunch_btn3=findViewById<ImageButton>(R.id.brunch_btn3)
 
-        //버튼 클릭 이벤트
+        //카테고리 선택 버튼 이벤트
         brunch_btn.setOnClickListener {
             val intent = Intent(this, SearchbrunchActivity::class.java)     //SearchbrunchActivity로 액티비티 이동 ,
             this.startActivity(intent)
@@ -55,6 +55,7 @@ class SearchbrunchActivity : AppCompatActivity() {
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
+        //메뉴 선택 버튼 이벤트
         brunch_btn1.setOnClickListener {
             val intent = Intent(this, Ingredient1Activity::class.java)
             this.startActivity(intent)

@@ -15,15 +15,16 @@ import com.example.vegandiary.MemoView.MemoActivity
 
 class MainActivity : AppCompatActivity()  {
 
+    //세부 화면으로 가는 버튼 선언
     lateinit var SearchTextButton: Button
-
+    //
     lateinit var FindRecipe_btn:Button
-    //하단 메뉴바
+    //하단 메뉴바 버튼 선언
     lateinit var recipe_btn: android.widget.ImageButton
     lateinit var restaurant_btn: android.widget.ImageButton
     lateinit var calendar_btn:android.widget.ImageButton
     lateinit var setting_btn:android.widget.ImageButton
-
+    //스크랩 화면 버튼 선언
     lateinit var ScrapButton:android.widget.ImageButton
 
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //클릭시 숫자 count 늘어나는 하트 버튼 구현
         val count_num=findViewById<TextView>(R.id.hearttext1)
         val count_num2=findViewById<TextView>(R.id.hearttext2)
         val heartbtn=findViewById<ImageButton>(R.id.heart1)

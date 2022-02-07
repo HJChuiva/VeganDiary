@@ -28,8 +28,7 @@ class Activity_howtocook1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_howtocook1)
 
-        //button 가져오기
-
+        //id로 button 가져오기
         tip=findViewById<Button>(R.id.tip)
 
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
