@@ -7,7 +7,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.Activity.Recipe.Ingredient4Activity
-import com.example.vegandiary.Fragment.RestaurantFragment
+import com.example.vegandiary.Activity.Search.SearchFullActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.memoView.MemoActivity
 
@@ -24,8 +24,6 @@ class DashboardActivity : AppCompatActivity()  {
     lateinit var setting_btn:android.widget.ImageButton
 
     lateinit var ScrapButton:android.widget.ImageButton
-
-    private val restaurantFragment = RestaurantFragment() // 비건 식당 화면
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
