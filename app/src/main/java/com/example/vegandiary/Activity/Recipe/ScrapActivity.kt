@@ -1,4 +1,4 @@
-package com.example.vegandiary.Activity
+package com.example.vegandiary.Activity.Recipe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
