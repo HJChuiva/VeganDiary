@@ -30,13 +30,7 @@ import kotlinx.android.synthetic.main.activity_maps.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    // 하단 메뉴바
-    lateinit var recipe_btn: android.widget.ImageButton
-    lateinit var restaurant_btn: android.widget.ImageButton
-    lateinit var calendar_btn:android.widget.ImageButton
-    lateinit var setting_btn:android.widget.ImageButton
-
-    // 구글 지도
+    // 구글 맵 객체를 불러옴
     private lateinit var mMap: GoogleMap
 
     // 현재 위치
@@ -47,6 +41,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     val PERM_FLAG = 99
 
 
+    // 하단 메뉴바
+    lateinit var recipe_btn: android.widget.ImageButton
+    lateinit var restaurant_btn: android.widget.ImageButton
+    lateinit var calendar_btn:android.widget.ImageButton
+    lateinit var setting_btn:android.widget.ImageButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,9 +54,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // 권한 체크
         if (isPermitted()) {
-            startProcess()
-        } else {
-            ActivityCompat.requestPermissions(this, permissions, PERM_FLAG) // 권한 요청
+            startProcess()  // 구글맵 호출
+        }
+        // 권한 요청
+        else {
+            ActivityCompat.requestPermissions(this, permissions, PERM_FLAG)
         }
 
 
@@ -66,21 +68,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
+        //레시피 화면으로 이동
         recipe_btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+        //레스토랑 화면으로 이동
         restaurant_btn.setOnClickListener{
             val intent = Intent(this, MapsActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+        //캘린더 화면으로 이동
         calendar_btn.setOnClickListener{
             val intent = Intent(this, MemoActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+        //설정 화면으로 이동
         setting_btn.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
@@ -88,32 +94,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    // 권한 승인
-    override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<out String>,
-            grantResults: IntArray
-    ) {
-        when (requestCode) {
-            PERM_FLAG -> {
-                var check = true
-                for (grant in grantResults) {
-                    if (grant != PERMISSION_GRANTED) {
-                        check = false
-                        break
-                    }
-                }
-                if (check) {
-                    startProcess()
-                } else {
-                    Toast.makeText(this, "권한을 승인해야 앱을 사용할 수 있습니다", Toast.LENGTH_LONG).show()
-                    finish()
-                }
-            }
-        }
-    }
-
-    // 권한 체크
+    // 권한요청
     fun isPermitted(): Boolean {
         for (perm in permissions) {
             if (ContextCompat.checkSelfPermission(this, perm) != PERMISSION_GRANTED) {
@@ -123,12 +104,44 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         return true
     }
 
-    // 사용 요청
+    // 구글맵 호출
     fun startProcess() {
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
+
+
+    // 권한요청 처리 결과 수신
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            PERM_FLAG -> {
+                var check = true
+
+                // 요청한 권한 허용/거부 상태 한번에 체크
+                for (grant in grantResults) {
+                    if (grant != PERMISSION_GRANTED) {
+                        check = false
+                        break
+                    }
+                }
+                // 요청한 권한 허용함
+                if (check) {
+                    startProcess()
+                }
+                // 권한 허용 안함
+                else {
+                    Toast.makeText(this, "권한을 승인해야 앱을 사용할 수 있습니다", Toast.LENGTH_LONG).show()
+                    finish()
+                }
+            }
+        }
+    }
+
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
@@ -144,21 +157,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap!!.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
             override fun onMarkerClick(marker: Marker): Boolean {
 
-                //var maps_view = findViewById<View>(R.id.maps_view)
                 var name = findViewById<TextView>(R.id.name)
                 var field = findViewById<TextView>(R.id.field)
                 var location = findViewById<TextView>(R.id.location)
 
-                maps_view.visibility = View.VISIBLE; // 카드뷰 보이게
-                name.text = marker.title    // 식당 이름
-                field.text = marker.snippet // 음식 종류
-                location.text = marker.position.toString()
+                maps_view.visibility = View.VISIBLE;       // 카드뷰 보이게
+                name.text = marker.title                   // 식당 이름
+                field.text = marker.snippet                // 음식 종류
+                location.text = marker.position.toString() // 식당 위치
 
                 return false
             }
         })
 
-        //맵 클릭시 카드뷰 안보임
+        // 맵 클릭시 카드뷰 안보임
         mMap!!.setOnMapClickListener(object : GoogleMap.OnMapClickListener {
             override fun onMapClick(latLng: LatLng) {
                 maps_view.visibility = View.GONE
@@ -166,6 +178,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         })
     }
 
+    // 마커 아이콘 설정
     fun getDescriptorFromDrawable(drawableId: Int): BitmapDescriptor {
         var bitmapDrawable: BitmapDrawable
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -184,13 +197,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     @SuppressLint("MissingPermission")
     fun setUpdateLocationListener() {
-        val locationRequest = LocationRequest.create()
+        val locationRequest = LocationRequest.create() // 위치정보 요청
         locationRequest.run {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY // 정확도 높게
             interval = 1000 * 30 // 30초에 한번씩 요청
         }
 
+        // 실시간 위치 정보 받음
         locationCallback = object : LocationCallback() {
+            // 위치정보 변경 시 호출됨
             override fun onLocationResult(locationResult: LocationResult?) {
                 locationResult?.let {
                     for ((i, location) in it.locations.withIndex()) {
@@ -210,9 +225,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
+    // 위치 표시
     fun setLastLocation(location: Location) {
 
-        // 현재 나의 위치
+        // 사용자의 현재 위치
         val myLocation = LatLng(location.latitude, location.longitude)
 
 
@@ -264,9 +280,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // 카메라의 위치
         val cameraPosition = CameraPosition.Builder()
                 .target(myLocation)
-                .zoom(12.0f) // zoom in
+                .zoom(14.0f) // zoom in
                 .build()
 
-        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동
+        // 카메라 이동
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition))
     }
 }
