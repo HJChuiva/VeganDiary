@@ -47,6 +47,7 @@ class MemoActivity : AppCompatActivity() {
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
 
+        //값 삽입
         val r = Runnable {
             try {
                 Log.d("TAG", "Hello")
