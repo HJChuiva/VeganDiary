@@ -39,7 +39,7 @@ class OnboardingActivity : AppCompatActivity() {
                 val intent= Intent(this,LoginActivity::class.java)
                 startActivity(intent)
                     overridePendingTransition(0, 0); //애니메이션 없애기
-                    finish()},700)
+                    finish()},1000)
             }
         }
 
