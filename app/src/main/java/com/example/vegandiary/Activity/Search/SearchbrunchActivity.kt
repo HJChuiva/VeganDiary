@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
-import com.example.vegandiary.Activity.DashboardActivity
+import com.example.vegandiary.Activity.MainActivity
 import com.example.vegandiary.Activity.Recipe.Ingredient1Activity
 import com.example.vegandiary.Activity.Recipe.Ingredient2Activity
 import com.example.vegandiary.Activity.Recipe.Ingredient3Activity
@@ -44,7 +44,7 @@ class SearchbrunchActivity : AppCompatActivity() {
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
         GoBack_Btn.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }

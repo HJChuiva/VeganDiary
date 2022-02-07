@@ -68,7 +68,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
         recipe_btn.setOnClickListener{
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }

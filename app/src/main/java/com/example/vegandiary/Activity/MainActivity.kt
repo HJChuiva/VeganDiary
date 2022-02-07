@@ -6,20 +6,11 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.example.vegandiary.Fragment.*
 import com.example.vegandiary.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
-
-    private val dashboardFragment = DashboardFragment()   // 메인 화면
-    private val restaurantFragment = RestaurantFragment() // 비건 식당 화면
-    private val calenderFragment = CalenderFragment()     // 챌린지 화면
-    private val settingFragment = SettingFragment()       // 설정 화면
-
-    private val searchFragment = SearchFragment()
 
     lateinit var bottom_navigation : BottomNavigationView // 메뉴바
 
@@ -40,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val intentRegister = Intent(applicationContext, DashboardActivity::class.java)
+        val intentRegister = Intent(applicationContext, MainActivity::class.java)
         startActivity(intentRegister)
         overridePendingTransition(0, 0); //애니메이션 없애기
 

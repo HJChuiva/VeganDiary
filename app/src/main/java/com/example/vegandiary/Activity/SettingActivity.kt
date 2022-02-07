@@ -1,6 +1,5 @@
 package com.example.vegandiary.Activity
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
@@ -38,7 +37,7 @@ class SettingActivity : AppCompatActivity() {
 
 
         recipe_btn.setOnClickListener{
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }

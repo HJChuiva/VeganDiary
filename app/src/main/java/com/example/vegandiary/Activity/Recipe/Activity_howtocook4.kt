@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import com.example.vegandiary.Activity.DashboardActivity
+import com.example.vegandiary.Activity.MainActivity
 import com.example.vegandiary.Activity.MapsActivity
 import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
@@ -44,7 +44,7 @@ class Activity_howtocook4 : AppCompatActivity() {
 
         //하단 메뉴바
         recipe_btn.setOnClickListener{
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }

@@ -54,7 +54,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.OnboardingActivity" />
-        <activity android:name=".Activity.DashboardActivity" />
+        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity" />
