@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.Activity.Recipe.Ingredient4Activity
+import com.example.vegandiary.Activity.Recipe.ScrapActivity
 import com.example.vegandiary.Activity.Search.SearchFullActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.memoView.MemoActivity
