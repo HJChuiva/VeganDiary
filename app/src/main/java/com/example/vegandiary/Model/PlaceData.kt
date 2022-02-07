@@ -1,4 +1,4 @@
-package com.example.vegandiary.Data
+package com.example.vegandiary.Model
 
 data class PlaceData (val pName:String = "Name",
                       val pKind:String = "Kind",

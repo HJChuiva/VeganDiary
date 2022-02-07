@@ -1,12 +1,10 @@
-package com.example.vegandiary.db
+package com.example.vegandiary.MemoDB
 
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.vegandiary.db.Memo
-import com.example.vegandiary.db.MemoDao
 
 @Database(entities = [Memo::class], version = 2)
 abstract class MemoDb: RoomDatabase() {

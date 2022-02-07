@@ -57,15 +57,14 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.Search.SearchFullActivity" />
         <activity android:name=".Activity.Search.SearchbrunchActivity" />
         <activity android:name=".Activity.Search.SearchdessertActivity" />
         <activity android:name=".Activity.Recipe.ScrapActivity" />
         <activity android:name=".Activity.Search.ScrollBrunchActivity" />
-        <activity android:name=".memoView.AddActivity" />
-        <activity android:name=".memoView.DetailActivity" />
-        <activity android:name=".memoView.MemoActivity" />
+        <activity android:name=".MemoView.AddActivity" />
+        <activity android:name=".MemoView.DetailActivity" />
+        <activity android:name=".MemoView.MemoActivity" />
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />

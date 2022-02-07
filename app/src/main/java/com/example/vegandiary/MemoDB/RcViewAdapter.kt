@@ -1,4 +1,4 @@
-package com.example.vegandiary.db
+package com.example.vegandiary.MemoDB
 
 
 import android.content.Context
@@ -6,13 +6,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vegandiary.R
-import com.example.vegandiary.memoView.AddActivity
-import com.example.vegandiary.memoView.DetailActivity
+import com.example.vegandiary.MemoView.DetailActivity
 
 class RcViewAdapter(private val context: Context, private val memos: List<Memo>) :
     RecyclerView.Adapter<RcViewAdapter.Holder>() {

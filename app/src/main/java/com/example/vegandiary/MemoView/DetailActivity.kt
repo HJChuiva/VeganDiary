@@ -1,4 +1,4 @@
-package com.example.vegandiary.memoView
+package com.example.vegandiary.MemoView
 
 import android.content.Intent
 import android.os.Build
@@ -8,7 +8,7 @@ import android.text.method.ScrollingMovementMethod
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.example.vegandiary.R
-import com.example.vegandiary.db.MemoDb
+import com.example.vegandiary.MemoDB.MemoDb
 import kotlinx.android.synthetic.main.activity_detail.*
 import java.time.LocalDate
 

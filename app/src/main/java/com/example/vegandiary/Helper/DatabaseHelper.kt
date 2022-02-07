@@ -1,4 +1,4 @@
-package com.example.vegandiary.Sql
+package com.example.vegandiary.Helper
 
 import android.content.ContentValues
 import android.content.Context

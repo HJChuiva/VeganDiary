@@ -10,7 +10,7 @@ import androidx.core.widget.NestedScrollView
 import com.example.vegandiary.R
 import com.example.vegandiary.Helper.InputValidation
 import com.example.vegandiary.Model.User
-import com.example.vegandiary.Sql.DatabaseHelper
+import com.example.vegandiary.Helper.DatabaseHelper
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout

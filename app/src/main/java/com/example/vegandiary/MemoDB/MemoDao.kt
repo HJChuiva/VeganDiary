@@ -1,4 +1,4 @@
-package com.example.vegandiary.db
+package com.example.vegandiary.MemoDB
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -1,4 +1,4 @@
-package com.example.vegandiary.memoView
+package com.example.vegandiary.MemoView
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,9 +11,9 @@ import com.example.vegandiary.Activity.MainActivity
 import com.example.vegandiary.Activity.MapsActivity
 import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
-import com.example.vegandiary.db.Memo
-import com.example.vegandiary.db.MemoDb
-import com.example.vegandiary.db.RcViewAdapter
+import com.example.vegandiary.MemoDB.Memo
+import com.example.vegandiary.MemoDB.MemoDb
+import com.example.vegandiary.MemoDB.RcViewAdapter
 import kotlinx.android.synthetic.main.activity_memo.*
 import java.text.SimpleDateFormat
 import java.util.*
