@@ -9,7 +9,7 @@ import com.example.vegandiary.Activity.MainActivity
 import com.example.vegandiary.Activity.MapsActivity
 import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
-import com.example.vegandiary.memoView.MemoActivity
+import com.example.vegandiary.MemoView.MemoActivity
 
 class Activity_howtocook4 : AppCompatActivity() {
 

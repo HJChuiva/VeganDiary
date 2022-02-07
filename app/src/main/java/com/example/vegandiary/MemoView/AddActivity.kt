@@ -1,4 +1,4 @@
-package com.example.vegandiary.memoView
+package com.example.vegandiary.MemoView
 
 
 import android.content.Intent
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.example.vegandiary.R
-import com.example.vegandiary.db.Memo
-import com.example.vegandiary.db.MemoDb
+import com.example.vegandiary.MemoDB.Memo
+import com.example.vegandiary.MemoDB.MemoDb
 import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_add.edit_title
 

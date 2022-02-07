@@ -10,7 +10,7 @@ import com.example.vegandiary.Activity.Recipe.Ingredient4Activity
 import com.example.vegandiary.Activity.Recipe.ScrapActivity
 import com.example.vegandiary.Activity.Search.SearchFullActivity
 import com.example.vegandiary.R
-import com.example.vegandiary.memoView.MemoActivity
+import com.example.vegandiary.MemoView.MemoActivity
 
 
 class MainActivity : AppCompatActivity()  {

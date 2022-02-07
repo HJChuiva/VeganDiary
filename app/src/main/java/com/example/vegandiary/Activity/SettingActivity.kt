@@ -1,16 +1,14 @@
 package com.example.vegandiary.Activity
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vegandiary.R
-import com.example.vegandiary.memoView.MemoActivity
+import com.example.vegandiary.MemoView.MemoActivity
 
 
 class SettingActivity : AppCompatActivity() {
