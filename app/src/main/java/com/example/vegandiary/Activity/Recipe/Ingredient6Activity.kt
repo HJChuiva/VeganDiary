@@ -33,7 +33,7 @@ class Ingredient6Activity : AppCompatActivity() {
         Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
 
         Howtocook_btn.setOnClickListener{
-            val intent = Intent(this, Activity_howtocook5::class.java)
+            val intent = Intent(this, Activity_howtocook6::class.java)
             this.startActivity(intent)
         }
 

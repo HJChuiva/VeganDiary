@@ -9,6 +9,8 @@ import com.example.vegandiary.R
 
 class SearchFullActivity : AppCompatActivity() {
 
+    //선택하지 않은 초반 레시피 검색 초반 화면
+
     lateinit var brunch_btn: ImageButton
     lateinit var dessert_btn: ImageButton
     lateinit var GoBack_Btn:ImageButton

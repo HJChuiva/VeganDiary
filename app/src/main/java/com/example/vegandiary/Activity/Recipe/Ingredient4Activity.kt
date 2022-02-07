@@ -12,6 +12,7 @@ import com.example.vegandiary.R
 import com.example.vegandiary.MemoView.MemoActivity
 
 class Ingredient4Activity : AppCompatActivity() {
+
     lateinit var tip: Button
     lateinit var Howtocook_btn : Button
 
@@ -19,6 +20,7 @@ class Ingredient4Activity : AppCompatActivity() {
     lateinit var restaurant_btn: android.widget.ImageButton
     lateinit var calendar_btn:android.widget.ImageButton
     lateinit var setting_btn:android.widget.ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredient4)
@@ -29,7 +31,6 @@ class Ingredient4Activity : AppCompatActivity() {
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
         Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
-
 
         tip=findViewById<Button>(R.id.tip)
 

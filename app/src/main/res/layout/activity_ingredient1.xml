@@ -247,7 +247,7 @@
                     tools:ignore="MissingConstraints">
 
                     <Button
-                        android:id="@+id/Ingredient"
+                        android:id="@+id/Ingredient_btn"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
