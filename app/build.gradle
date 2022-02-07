@@ -63,9 +63,6 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.3"
     implementation "androidx.room:room-ktx:2.2.3"
 
-
-
-
     //glide
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
@@ -75,8 +72,6 @@ dependencies {
 
     //SlidingUpPanel
     implementation 'com.github.hannesa2:AndroidSlidingUpPanel:4.2.1'
-
-
 
 
     // Import the Firebase BoM
@@ -89,7 +84,6 @@ dependencies {
     // When using the BoM, don't specify versions in Firebase dependencies
     //implementation 'com.google.firebase:firebase-analytics-ktx'
 
-
     // 인디케이터 오픈소스
 
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
@@ -99,8 +93,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0' //Circle ImageView
 
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-
-
-
 
 }
