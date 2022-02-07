@@ -8,13 +8,11 @@ import com.example.vegandiary.R
 
 class SearchActivity : AppCompatActivity() {
 
-    lateinit var brunch_btn: ImageButton
-    lateinit var dessert_btn: ImageButton
-    lateinit var GoBack_Btn: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        // activity_search 와 scroll_search brunch를 합쳐 activity_search_full 만듬
 
     }
 }

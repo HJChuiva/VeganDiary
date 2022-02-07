@@ -57,7 +57,6 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.SettingActivity" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.Search.SearchFullActivity" />
         <activity android:name=".Activity.Search.SearchbrunchActivity" />
         <activity android:name=".Activity.Search.SearchdessertActivity" />

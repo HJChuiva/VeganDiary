@@ -33,10 +33,12 @@ class Ingredient2Activity : AppCompatActivity() {
 
         tip=findViewById<Button>(R.id.tip)
 
+        //토스트 메세지 호출
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n슬라이스한 토마토 위에 소금과 후춧\n가루를 조금 뿌려 간을 해도 맛있어요", Toast.LENGTH_SHORT).show()
         }
 
+        //Howtocook 페이지 호출
         Howtocook_btn.setOnClickListener{
             val intent = Intent(this, Activity_howtocook2::class.java)
             this.startActivity(intent)

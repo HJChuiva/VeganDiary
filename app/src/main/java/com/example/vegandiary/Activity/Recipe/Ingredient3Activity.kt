@@ -38,6 +38,7 @@ class Ingredient3Activity : AppCompatActivity() {
             this.startActivity(intent)
         }
 
+        //토스트 메세지 호출
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n병아리콩을 으깰 때 적당히 으깨야 씹는\n맛이 좋아요 너무 많이 으깨지 않도록\n주의하세요", Toast.LENGTH_SHORT).show()
         }

@@ -13,6 +13,7 @@ import com.example.vegandiary.memoView.MemoActivity
 
 class Activity_howtocook1 : AppCompatActivity() {
 
+    //버튼선언
     lateinit var tip: Button
 
     lateinit var Ingredient_btn : Button
@@ -26,6 +27,8 @@ class Activity_howtocook1 : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_howtocook1)
+
+        //button 가져오기
 
         tip=findViewById<Button>(R.id.tip)
 
@@ -63,7 +66,8 @@ class Activity_howtocook1 : AppCompatActivity() {
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
-        //토스트메세지
+
+        //토스트메세지 호출
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n팬케이크를 너무 오래 구우면 촉촉한 맛이 떨어져요. 기포가 어느 정도 올라오면 바로 뒤집으세요.", Toast.LENGTH_SHORT).show()
         }

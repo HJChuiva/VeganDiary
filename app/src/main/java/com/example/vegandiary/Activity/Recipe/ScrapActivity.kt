@@ -8,5 +8,6 @@ class ScrapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scrap)
+        //scrap창 호출
     }
 }

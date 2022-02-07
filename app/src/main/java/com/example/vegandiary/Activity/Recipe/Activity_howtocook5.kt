@@ -13,6 +13,7 @@ import com.example.vegandiary.memoView.MemoActivity
 
 class Activity_howtocook5 : AppCompatActivity() {
 
+    //버튼 선언
     lateinit var tip: Button
 
     lateinit var Ingredient_btn : Button
@@ -36,6 +37,7 @@ class Activity_howtocook5 : AppCompatActivity() {
 
         Ingredient_btn=findViewById(R.id.Ingredient_btn)
 
+        //Ingredient 화면으로 돌아감
         Ingredient_btn.setOnClickListener{
             val intent = Intent(this, Ingredient5Activity::class.java)
             this.startActivity(intent)
@@ -63,6 +65,7 @@ class Activity_howtocook5 : AppCompatActivity() {
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+        //Toast 메세지 출력
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n" +
                     "\n" +

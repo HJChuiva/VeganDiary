@@ -13,6 +13,7 @@ import com.example.vegandiary.memoView.MemoActivity
 
 class Activity_howtocook3 : AppCompatActivity() {
 
+    //버튼 선언
     lateinit var tip: Button
 
     lateinit var Ingredient_btn : Button

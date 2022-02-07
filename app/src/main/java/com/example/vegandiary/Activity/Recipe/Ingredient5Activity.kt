@@ -30,6 +30,7 @@ class Ingredient5Activity : AppCompatActivity() {
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
 
+
         tip=findViewById<Button>(R.id.tip)
 
         Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
@@ -39,6 +40,7 @@ class Ingredient5Activity : AppCompatActivity() {
             this.startActivity(intent)
         }
 
+        //토스트 메세지 호출
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n더 바삭바삭한 식감을 원하면 오븐에 굽\n는 시간을 조금 늘려도 됩니다 하지만\n너무 오래 구우면 딱딱해질 수 있어요", Toast.LENGTH_SHORT).show()
         }

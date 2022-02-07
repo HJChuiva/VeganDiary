@@ -39,9 +39,11 @@ class Ingredient6Activity : AppCompatActivity() {
 
         tip=findViewById<Button>(R.id.tip)
 
+        //토스트 메세지 호출
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n커민 대신 참깨를 넣어 섞어도 좋아요", Toast.LENGTH_SHORT).show()
         }
+
         //하단 메뉴바
         recipe_btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)

@@ -36,9 +36,11 @@ class Ingredient1Activity : AppCompatActivity() {
         tip=findViewById<Button>(R.id.tip)
         Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
 
+        //Toast 메세지 호출
         tip.setOnClickListener{
             val toast=Toast.makeText(this, "Tip\n\n팬케이크를 너무 오래 구우면 촉촉한 맛이 떨어져요. 기포가 어느 정도 올라오면 바로 뒤집으세요.", Toast.LENGTH_SHORT).show()
         }
+        //Howtocook 페이지 호출
         Howtocook_btn.setOnClickListener{
             val intent = Intent(this, Activity_howtocook1::class.java)
             this.startActivity(intent)

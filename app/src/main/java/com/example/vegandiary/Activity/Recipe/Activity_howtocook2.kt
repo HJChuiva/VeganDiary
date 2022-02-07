@@ -13,6 +13,7 @@ import com.example.vegandiary.memoView.MemoActivity
 
 class Activity_howtocook2 : AppCompatActivity() {
 
+    //버튼선언
     lateinit var tip: Button
 
     lateinit var Ingredient_btn : Button
@@ -63,6 +64,8 @@ class Activity_howtocook2 : AppCompatActivity() {
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
         }
+
+
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n슬라이스한 토마토 위에 소금과 후춧\n가루를 조금 뿌려 간을 해도 맛있어요", Toast.LENGTH_SHORT).show()
         }

@@ -11,13 +11,15 @@ import com.example.vegandiary.R
 class ScrollBrunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        //버튼 선언
         lateinit var brunch_btn1 : ImageButton
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.scroll_search_brunch)
+        setContentView(R.layout.scroll_search_brunch)       //슬라이딩 패널
 
         brunch_btn1 = findViewById<ImageButton>(R.id.brunch_btn1)
 
+        //Ingredient1Activity 호출
         brunch_btn1.setOnClickListener {
             val intent = Intent(this, Ingredient1Activity::class.java)
             this.startActivity(intent)
