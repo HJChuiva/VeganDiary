@@ -13,6 +13,7 @@ import com.example.vegandiary.memoView.MemoActivity
 
 class Ingredient3Activity : AppCompatActivity() {
     lateinit var tip: Button
+    lateinit var Howtocook_btn : Button
 
     lateinit var recipe_btn: android.widget.ImageButton
     lateinit var restaurant_btn: android.widget.ImageButton
@@ -28,8 +29,14 @@ class Ingredient3Activity : AppCompatActivity() {
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
+        Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
 
         tip=findViewById<Button>(R.id.tip)
+
+        Howtocook_btn.setOnClickListener{
+            val intent = Intent(this, Activity_howtocook3::class.java)
+            this.startActivity(intent)
+        }
 
         tip.setOnClickListener{
             val toast= Toast.makeText(this, "Tip\n\n병아리콩을 으깰 때 적당히 으깨야 씹는\n맛이 좋아요 너무 많이 으깨지 않도록\n주의하세요", Toast.LENGTH_SHORT).show()

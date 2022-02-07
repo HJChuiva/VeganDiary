@@ -11,9 +11,11 @@ import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.memoView.MemoActivity
 
-class Ingredient6Activity : AppCompatActivity() {
+class Activity_howtocook4 : AppCompatActivity() {
+
     lateinit var tip: Button
-    lateinit var Howtocook_btn : Button
+
+    lateinit var Ingredient_btn : Button
 
     lateinit var recipe_btn: android.widget.ImageButton
     lateinit var restaurant_btn: android.widget.ImageButton
@@ -21,27 +23,25 @@ class Ingredient6Activity : AppCompatActivity() {
     lateinit var setting_btn:android.widget.ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ingredient6)
 
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_howtocook4)
+
+        tip=findViewById<Button>(R.id.tip)
 
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
         calendar_btn =findViewById<android.widget.ImageButton>(R.id.calendar_btn)
         setting_btn =findViewById<android.widget.ImageButton>(R.id.setting_btn)
 
-        Howtocook_btn=findViewById<Button>(R.id.Howtocook_btn)
+        Ingredient_btn=findViewById(R.id.Ingredient_btn)
 
-        Howtocook_btn.setOnClickListener{
-            val intent = Intent(this, Activity_howtocook5::class.java)
+        Ingredient_btn.setOnClickListener{
+            val intent = Intent(this, Ingredient4Activity::class.java)
             this.startActivity(intent)
+            overridePendingTransition(0, 0); //애니메이션 없애기
         }
 
-        tip=findViewById<Button>(R.id.tip)
-
-        tip.setOnClickListener{
-            val toast= Toast.makeText(this, "Tip\n\n커민 대신 참깨를 넣어 섞어도 좋아요", Toast.LENGTH_SHORT).show()
-        }
         //하단 메뉴바
         recipe_btn.setOnClickListener{
             val intent = Intent(this, DashboardActivity::class.java)
@@ -62,6 +62,13 @@ class Ingredient6Activity : AppCompatActivity() {
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
+        }
+        tip.setOnClickListener{
+            val toast= Toast.makeText(this, "Tip\n" +
+                    "\n" +
+                    "동그란 케이크 틀에 담은 뒤, 6등분\n" +
+                    "으로 칼집을 내 자르면 깔끔하게 세모\n" +
+                    "모양의 스콘을 만들 수 있어요", Toast.LENGTH_SHORT).show()
         }
     }
 }

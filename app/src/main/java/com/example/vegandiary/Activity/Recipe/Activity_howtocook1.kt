@@ -4,13 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.example.vegandiary.Activity.DashboardActivity
 import com.example.vegandiary.Activity.MapsActivity
 import com.example.vegandiary.Activity.SettingActivity
 import com.example.vegandiary.R
 import com.example.vegandiary.memoView.MemoActivity
 
-class activity_howtocook1 : AppCompatActivity() {
+class Activity_howtocook1 : AppCompatActivity() {
+
+    lateinit var tip: Button
 
     lateinit var Ingredient_btn : Button
 
@@ -23,6 +26,8 @@ class activity_howtocook1 : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_howtocook1)
+
+        tip=findViewById<Button>(R.id.tip)
 
         recipe_btn =findViewById<android.widget.ImageButton>(R.id.recipe_btn)
         restaurant_btn =findViewById<android.widget.ImageButton>(R.id.restaurant_btn)
@@ -57,6 +62,9 @@ class activity_howtocook1 : AppCompatActivity() {
             val intent = Intent(this, SettingActivity::class.java)
             this.startActivity(intent)
             overridePendingTransition(0, 0); //애니메이션 없애기
+        }
+        tip.setOnClickListener{
+            val toast= Toast.makeText(this, "Tip\n\n팬케이크를 너무 오래 구우면 촉촉한 맛이 떨어져요. 기포가 어느 정도 올라오면 바로 뒤집으세요.", Toast.LENGTH_SHORT).show()
         }
     }
 }

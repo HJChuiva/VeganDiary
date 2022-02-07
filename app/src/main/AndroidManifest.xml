@@ -24,7 +24,13 @@
         <activity android:name=".Activity.Recipe.Ingredient3Activity" />
         <activity android:name=".Activity.Recipe.Ingredient2Activity" />
         <activity android:name=".Activity.Recipe.Ingredient1Activity" />
-        <activity android:name=".Activity.Recipe.activity_howtocook1" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook1" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook2" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook3" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook4" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook5" />
+        <activity android:name=".Activity.Recipe.Activity_howtocook6" />
+
         <activity android:name=".Activity.RegisterActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
