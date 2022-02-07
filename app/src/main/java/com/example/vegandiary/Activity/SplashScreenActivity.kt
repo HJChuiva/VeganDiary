@@ -9,6 +9,8 @@ import com.example.vegandiary.R
 class SplashScreenActivity : AppCompatActivity() {
 
     //스플래시 스크린 화면 호출
+
+    //서로 다른 스레드간의 통신을 위해 handler 선언
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
