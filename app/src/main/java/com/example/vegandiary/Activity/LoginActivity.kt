@@ -1,6 +1,5 @@
 package com.example.vegandiary.Activity
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -17,20 +16,26 @@ import com.google.android.material.textfield.TextInputLayout
 
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
+
     private val activity: AppCompatActivity = this@LoginActivity
     private var nestedScrollView: NestedScrollView? = null
+
+    // 아이디(이메일), 비밀번호
     private var textInputLayoutEmail: TextInputLayout? = null
     private var textInputLayoutPassword: TextInputLayout? = null
     private var textInputEditTextEmail: TextInputEditText? = null
     private var textInputEditTextPassword: TextInputEditText? = null
-    private var appCompatButtonLogin: AppCompatButton? = null
-    private var textViewLinkRegister: AppCompatTextView? = null
-    private var inputValidation: InputValidation? = null
-    private var databaseHelper: DatabaseHelper? = null
+
+    private var appCompatButtonLogin: AppCompatButton? = null   // 로그인 버튼
+    private var textViewLinkRegister: AppCompatTextView? = null // 회원가입 페이지로 이동
+    private var inputValidation: InputValidation? = null        // 입력 유효성 검사
+    private var databaseHelper: DatabaseHelper? = null          // 데이터 관리
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        //supportActionBar!!.hide()
+
         initViews()
         initListeners()
         initObjects()
@@ -47,18 +52,18 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initListeners() {
-        appCompatButtonLogin!!.setOnClickListener(this)
-        textViewLinkRegister!!.setOnClickListener(this)
+        appCompatButtonLogin!!.setOnClickListener(this) // 로그인 버튼
+        textViewLinkRegister!!.setOnClickListener(this) // 회원가입 페이지로 이동
     }
 
     private fun initObjects() {
-        databaseHelper = DatabaseHelper(activity)
-        inputValidation = InputValidation(activity)
+        databaseHelper = DatabaseHelper(activity)   // 데이터 관리
+        inputValidation = InputValidation(activity) // 입력 유효성 검사
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.appCompatButtonLogin -> verifyFromSQLite()
+            R.id.appCompatButtonLogin -> verifyFromSQLite() // 로그인 유효성 검사
             R.id.textViewLinkRegister -> {
                 val intentRegister = Intent(applicationContext, RegisterActivity::class.java)
                 startActivity(intentRegister)
@@ -68,38 +73,50 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyFromSQLite() {
+        // 이메일이 비어있는 경우
         if (!inputValidation!!.isInputEditTextFilled(
                 textInputEditTextEmail!!,
-                textInputLayoutEmail!!, "Enter Valid Email"
+                textInputLayoutEmail!!, "Enter Valid Email" // 경고 문구
             )
         ) {
             return
         }
+
+        // 올바르지 않은 이메일 형식
         if (!inputValidation!!.isInputEditTextEmail(
                 textInputEditTextEmail!!,
-                textInputLayoutEmail!!, "Enter Valid Email"
+                textInputLayoutEmail!!, "Enter Valid Email" // 경고 문구
             )
         ) {
             return
         }
+
+        // 비밀번호가 비어있는 경우
         if (!inputValidation!!.isInputEditTextFilled(
                 textInputEditTextPassword!!,
-                textInputLayoutPassword!!, "Enter Valid Email"
+                textInputLayoutPassword!!, "Enter Password" // 경고 문구
             )
         ) {
             return
         }
+
+        // 아이디, 비밀번호 확인
         if (databaseHelper!!.checkUser(
-                textInputEditTextEmail!!.text.toString().trim { it <= ' ' },
+                textInputEditTextEmail!!.text.toString().trim { it <= ' ' },  // 문자열 양 끝 공백 제외
                 textInputEditTextPassword!!.text.toString().trim { it <= ' ' })
         ) {
             val accountsIntent = Intent(activity, MainActivity::class.java) // 메인화면 시작
+
+            // 데이터 전달
             accountsIntent.putExtra(
                 "EMAIL",
-                textInputEditTextEmail!!.text.toString().trim { it <= ' ' })
-            emptyInputEditText()
-            startActivity(accountsIntent)
-        } else {
+                textInputEditTextEmail!!.text.toString().trim { it <= ' ' }) // 문자열 양 끝 공백 제외
+            emptyInputEditText() // null이 아님을 명시
+            startActivity(accountsIntent) // 메인화면 시작
+        }
+        // 아이디, 비밀번호가 틀린경우
+        else {
+            // 팝업 문자 표시
             Snackbar.make(
                 nestedScrollView!!,
                 "Wrong Email or Password",
@@ -108,8 +125,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    // Null 아님
     private fun emptyInputEditText() {
-        textInputEditTextEmail!!.text = null
-        textInputEditTextPassword!!.text = null
+        textInputEditTextEmail!!.text = null     // 이메일
+        textInputEditTextPassword!!.text = null  // 비밀번호
     }
 }
