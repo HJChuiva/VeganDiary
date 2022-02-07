@@ -220,6 +220,7 @@
                 android:layout_marginLeft="300dp"
                 android:backgroundTint="@color/backgroud"
                 android:text="tip"
+                android:fontFamily="@font/roboto"
                 android:textColor="#9E8E89"
                 android:textSize="13sp"
                 style="?android:attr/borderlessButtonStyle" />

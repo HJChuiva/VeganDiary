@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:gravity="bottom"
         sothree:umanoOverlay="true"
-        sothree:umanoPanelHeight="450dp"
+        sothree:umanoPanelHeight="560dp"
         sothree:umanoShadowHeight="0dp">
 
 

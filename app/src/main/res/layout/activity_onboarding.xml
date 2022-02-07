@@ -14,24 +14,24 @@
         android:id="@+id/my_intro_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        />
+        android:layout_centerInParent="true"/>
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/next_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="60dp"
         app:dotsColor="#DEDEDE"
         app:dotsCornerRadius="8dp"
         app:dotsSize="16dp"
         app:dotsSpacing="4dp"
         app:dotsWidthFactor="2.5"
-        app:selectedDotColor="#BECFBC"
         app:progressMode="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        />
+        app:selectedDotColor="#BECFBC" />
 
 
     <ImageView

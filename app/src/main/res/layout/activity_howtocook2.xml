@@ -83,6 +83,18 @@
                     android:layout_weight="10000" />
 
                 <ImageButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/backgroud"
+                    android:gravity="end"
+                    android:tint="#000000"
+                    app:srcCompat="@drawable/ic_baseline_star_outline_24" />
+
+
+                <ImageButton
                     android:id="@+id/imageButton8"
                     android:layout_width="20dp"
                     android:layout_height="20dp"

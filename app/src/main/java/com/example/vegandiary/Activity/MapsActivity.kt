@@ -42,8 +42,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     // 현재 위치
     val permissions = arrayOf(
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
     )
     val PERM_FLAG = 99
 
@@ -91,9 +91,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     // 권한 승인
     override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
+            requestCode: Int,
+            permissions: Array<out String>,
+            grantResults: IntArray
     ) {
         when (requestCode) {
             PERM_FLAG -> {
@@ -127,7 +127,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     // 사용 요청
     fun startProcess() {
         val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
+                .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
 
@@ -204,9 +204,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // 로케이션 요청 함수 호출 (locationRequest, locationCallback)
         fusedLocationClient.requestLocationUpdates(
-            locationRequest,
-            locationCallback,
-            Looper.myLooper()
+                locationRequest,
+                locationCallback,
+                Looper.myLooper()
         )
 
     }
@@ -223,9 +223,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // 현재 위치 마커
         val marker = MarkerOptions()
-            .position(myLocation)
-            .title("현재 위치")
-            .icon(descriptor)
+                .position(myLocation)
+                .title("현재 위치")
+                .icon(descriptor)
         mMap.clear() // 이전 마커 삭제
         mMap.addMarker(marker)  // 현재 위치
 
@@ -264,9 +264,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // 카메라의 위치
         val cameraPosition = CameraPosition.Builder()
-            .target(myLocation)
-            .zoom(12.0f) // zoom in
-            .build()
+                .target(myLocation)
+                .zoom(12.0f) // zoom in
+                .build()
 
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition)) // 카메라 이동
     }

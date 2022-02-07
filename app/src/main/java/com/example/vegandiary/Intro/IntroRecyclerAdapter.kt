@@ -15,12 +15,11 @@ class IntroRecyclerAdapter (private  var pageList: ArrayList<PageItem>)
     override fun getItemCount(): Int {
         return pageList.size
     }
+
     //데이터와 뷰 묶기
     override fun onBindViewHolder(holder: MyPagerViewholder, position: Int) {
         holder.bindWithView(pageList[position])
     }
-
-
 }
 
 
