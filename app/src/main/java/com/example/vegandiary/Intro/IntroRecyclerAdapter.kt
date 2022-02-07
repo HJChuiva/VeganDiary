@@ -12,13 +12,14 @@ class IntroRecyclerAdapter (private  var pageList: ArrayList<PageItem>)
             R.layout.item_intro_pager,parent,false))
     }
 
+    //pageList.size 리턴
     override fun getItemCount(): Int {
         return pageList.size
     }
 
     //데이터와 뷰 묶기
     override fun onBindViewHolder(holder: MyPagerViewholder, position: Int) {
-        holder.bindWithView(pageList[position])
+        holder.bindWithView(pageList[position])     //position값 받아오기
     }
 }
 

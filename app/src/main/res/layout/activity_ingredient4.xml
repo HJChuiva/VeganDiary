@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Recipe.Ingredient1Activity"
+    tools:context=".Activity.Recipe.Ingredient4Activity"
     android:background="@color/backgroud">
 
     <ScrollView
@@ -283,7 +283,7 @@
                     android:layout_weight="10000" />
 
                 <Button
-                    android:id="@+id/Howtocook_bs"
+                    android:id="@+id/Howtocook_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="right"

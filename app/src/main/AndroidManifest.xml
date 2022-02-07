@@ -62,6 +62,7 @@
         <activity android:name=".Activity.Search.SearchdessertActivity" />
         <activity android:name=".Activity.Recipe.ScrapActivity" />
         <activity android:name=".Activity.Search.ScrollBrunchActivity" />
+        <activity android:name=".Activity.Search.ScrolldessertActivity" />
         <activity android:name=".MemoView.AddActivity" />
         <activity android:name=".MemoView.DetailActivity" />
         <activity android:name=".MemoView.MemoActivity" />
