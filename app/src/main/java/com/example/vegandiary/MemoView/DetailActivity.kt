@@ -14,6 +14,7 @@ import java.time.LocalDate
 
 class DetailActivity : AppCompatActivity() {
 
+    //메모 상세페이지 화면 액티비티
     //전역변수로 선언
     private var memoDb: MemoDb? = null
     private var contents: String? = null

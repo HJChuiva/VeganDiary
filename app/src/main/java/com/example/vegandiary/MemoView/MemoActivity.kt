@@ -69,10 +69,12 @@ class MemoActivity : AppCompatActivity() {
         val thread = Thread(r) //try에서 문제가 없을 시 여기를 실행
         thread.start()
 
+
         delBtn.setOnClickListener {//delete버튼을 누를시 행동
             var intent = Intent(this, AddActivity::class.java)
             startActivity(intent)
         }
+
         //하단 메뉴바
         recipe_btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
@@ -96,7 +98,7 @@ class MemoActivity : AppCompatActivity() {
         }
 
     }
-
+    //MemoDB 제거
     override fun onDestroy() {
         MemoDb.destroyInstance()
         memoDb = null
