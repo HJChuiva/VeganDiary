@@ -17,8 +17,11 @@ import com.google.android.material.textfield.TextInputLayout
 
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener {
+
     private val activity: AppCompatActivity = this@RegisterActivity
     private var nestedScrollView: NestedScrollView? = null
+
+    // 아이디(이메일), 비밀번호
     private var textInputLayoutName: TextInputLayout? = null
     private var textInputLayoutEmail: TextInputLayout? = null
     private var textInputLayoutPassword: TextInputLayout? = null
@@ -27,15 +30,18 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private var textInputEditTextEmail: TextInputEditText? = null
     private var textInputEditTextPassword: TextInputEditText? = null
     private var textInputEditTextConfirmPassword: TextInputEditText? = null
-    private var appCompatButtonRegister: AppCompatButton? = null
-    private var appCompatTextViewLoginLink: AppCompatTextView? = null
-    private var inputValidation: InputValidation? = null
-    private var databaseHelper: DatabaseHelper? = null
-    private var user: User? = null
+
+    private var appCompatButtonRegister: AppCompatButton? = null      // 회원가입 버튼
+    private var appCompatTextViewLoginLink: AppCompatTextView? = null // 로그인 페이지로 이동
+    private var inputValidation: InputValidation? = null              // 입력 유효성 검사
+    private var databaseHelper: DatabaseHelper? = null                // 데이터 관리
+    private var user: User? = null                                    // 데이터 형식
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-//        supportActionBar!!.hide()
+
         initViews()
         initListeners()
         initObjects()
@@ -56,24 +62,26 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initListeners() {
-        appCompatButtonRegister!!.setOnClickListener(this)
-        appCompatTextViewLoginLink!!.setOnClickListener(this)
+        appCompatButtonRegister!!.setOnClickListener(this)    // 회원가입 버튼
+        appCompatTextViewLoginLink!!.setOnClickListener(this) // 로그인 페이지로 이동
     }
 
     private fun initObjects() {
-        inputValidation = InputValidation(activity)
-        databaseHelper = DatabaseHelper(activity)
-        user = User()
+        inputValidation = InputValidation(activity) // 데이터 관리
+        databaseHelper = DatabaseHelper(activity)   // 입력 유효성 검사
+        user = User()                               // 데이터 형식
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.appCompatButtonRegister -> postDataToSQLite()
-            R.id.appCompatTextViewLoginLink -> finish()
+            R.id.appCompatButtonRegister -> postDataToSQLite()  // 회원가입 유효성 검사
+            R.id.appCompatTextViewLoginLink -> finish()         // 로그인 페이지로 이동
         }
     }
 
+    // 회원가입 유효성 검사
     private fun postDataToSQLite() {
+        // Name이 비어있는 경우
         if (!inputValidation!!.isInputEditTextFilled(
                 textInputEditTextName!!,
                 textInputLayoutName!!, "Enter Full Name"
@@ -81,13 +89,15 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             return
         }
+        // 이메일이 비어있는 경우
         if (!inputValidation!!.isInputEditTextFilled(
                 textInputEditTextEmail!!,
-                textInputLayoutEmail!!, "Enter Full Name"
+                textInputLayoutEmail!!, "Enter Email"
             )
         ) {
             return
         }
+        // 올바르지 않은 이메일 형식
         if (!inputValidation!!.isInputEditTextEmail(
                 textInputEditTextEmail!!,
                 textInputLayoutEmail!!, "Enter Valid Email"
@@ -95,6 +105,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             return
         }
+        // 비밀번호가 비어있는 경우
         if (!inputValidation!!.isInputEditTextFilled(
                 textInputEditTextPassword!!,
                 textInputLayoutPassword!!, "Enter Password"
@@ -102,6 +113,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             return
         }
+
+        // 입력된 두 비밀번호가 다른 경우
         if (!inputValidation!!.isInputEditTextMatches(
                 textInputEditTextPassword!!, textInputEditTextConfirmPassword!!,
                 textInputLayoutConfirmPassword!!, "Password Does Not Matches"
@@ -109,6 +122,8 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             return
         }
+
+        // 회원가입 입력 유효성 검사
         if (!databaseHelper!!.checkUser(
                 textInputEditTextEmail!!.text.toString().trim { it <= ' ' })
         ) {
@@ -117,27 +132,28 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
             user!!.password = textInputEditTextPassword!!.text.toString().trim { it <= ' ' }
             databaseHelper!!.addUser(user!!)
 
-            // Snack Bar to show success message that record saved successfully
+            // 회원 가입 완료 시
             Snackbar.make(
                 nestedScrollView!!,
-                "Registration Successful!",
+                "Registration Successful!", // 팝업 문자
                 Snackbar.LENGTH_LONG
             ).show()
             emptyInputEditText()
         } else {
-            // Snack Bar to show error message that record already exists
+            // 이미 가입되어있는 경우 에러 문자 표시
             Snackbar.make(
                 nestedScrollView!!,
-                "Email Already Exists!",
+                "Email Already Exists!", // 팝업 문자
                 Snackbar.LENGTH_LONG
             ).show()
         }
     }
 
+    // Null 아님
     private fun emptyInputEditText() {
-        textInputEditTextName!!.text = null
-        textInputEditTextEmail!!.text = null
-        textInputEditTextPassword!!.text = null
-        textInputEditTextConfirmPassword!!.text = null
+        textInputEditTextName!!.text = null               // 이름
+        textInputEditTextEmail!!.text = null              // 이메일
+        textInputEditTextPassword!!.text = null           // 비밀번호
+        textInputEditTextConfirmPassword!!.text = null    // 비밀번호 확인
     }
 }
